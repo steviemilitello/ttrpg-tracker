@@ -6,6 +6,10 @@
 
 ![a picture of an example of the app](images/example1.png)
 
+**Example Image 2**
+
+![a picture of another example of the app](images/example2.png)
+
 **Entity-Relationship Diagram** 
 
 ![a picture of the entity-relationship diagram](images/erm.png)
@@ -35,7 +39,6 @@
 
 - HTML, CSS, CSS Bootstrap, JavaScript, Liquid JS, Express, MongoDB, API
 
-### Some API possibilities
+### API 
 
 - Board Game Atlas API: https://www.boardgameatlas.com/api/docs
-- BoardGameGeek API: https://boardgamegeek.com/wiki/page/BGG_XML_API2
