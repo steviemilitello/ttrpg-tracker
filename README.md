@@ -29,7 +29,9 @@
 - They want to be able to delete books from their collection
 - They want to be able to sort the books by name, genre, system, creator, type etc. 
 
-- Stretch Goal - Being able to access their owned PDFs versions from the app either from a local directory where it is stored or from their Google Drive
+- Stretch Goal 
+- Letting users sort own collection into folders/sub-collection
+- Being able to access their owned PDFs versions from the app either from a local directory where it is stored or from their Google Drive
 
 ### IMPLEMENTATION 
 
