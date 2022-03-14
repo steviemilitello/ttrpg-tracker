@@ -14,6 +14,13 @@
 
 ![a picture of the entity-relationship diagram](images/erm.png)
 
+### REQUIREMENTS
+
+- Models: User, Collection
+- API: Board Game Atlas: https://www.boardgameatlas.com/api/docs
+- RESTful routes: utilize routes for examples of user story below such as showing all the books, showing the users collection, adding and deleting books to their collection etc. 
+- ODM / MongoDB - utilize ODM to create a database of game information
+
 ### USER STORY 
 
 - As a user they want to be able to be able to add items they own to a collection
@@ -37,8 +44,4 @@
 
 ### TECHNOLOGIES 
 
-- HTML, CSS, CSS Bootstrap, JavaScript, Liquid JS, Express, MongoDB, API
-
-### API 
-
-- Board Game Atlas API: https://www.boardgameatlas.com/api/docs
+- HTML, CSS, CSS Bootstrap, JavaScript, Liquid JS, Express, MongoDB, Board Game Atlas API
