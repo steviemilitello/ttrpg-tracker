@@ -16,7 +16,7 @@
 
 ### REQUIREMENTS
 
-- Models: User, Collection
+- Models: User, Collection, Comments
 - API: Board Game Atlas: https://www.boardgameatlas.com/api/docs
 - RESTful routes: utilize routes for examples of user story below such as showing all the books, showing the users collection, adding and deleting books to their collection etc. 
 - ODM / MongoDB - utilize ODM to create a database of game information
