@@ -5,32 +5,37 @@
     <div class="row">
         {% for game in games %}
         <div class="card" style="width: 18rem;">
-            <h5 class="card-header">{{ game.title }}</h5>
+            <h5 class="card-header">{{ game.name }}</h5>
             <div class="card-body">
                 <p><img src="{{game.img}}"></p>
                 <p class="card-text">
-                Description: 
-                    {{ game.description }}
+                <p>Description:</p>
+                    <small>{{ game.description }}</small>
                 </p>
                 <p class="card-text">
-                    System: {{ game.system }}
+                    System:
+                        {{ game.system }}
                 </p>
                 <p class="card-text">
-                    Genres: {{ game.genres | join: ", "}}
+                    Genres:
+                        {{ game.genres | join: ", "}}
                 </p>
                 <p class="card-text">
-                    Creators: {{ game.creators }}
+                    Creators:
+                        {{ game.creators }}
                 </p>
                 <p class="card-text">
-                    Publisher: {{ game.publisher }}
+                    Publisher:
+                    {{ game.publisher }}
                 </p>
                 <p class="card-text">
-                    Types: {{ game.types | join: ", "}}
+                    Types:
+                    {{ game.types | join: ", "}}
                 </p>
                 <p class="card-text">
                     Players: {{ game.players }}
                 </p>
-                <a href="/games/{{ game.id }}" class="btn btn-info">
+                <a href="/games/{{ game.id }}" class="btn btn-success">
                     View {{ game.title }}
                 </a>
             </div>
