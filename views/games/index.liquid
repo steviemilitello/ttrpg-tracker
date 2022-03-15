@@ -1,23 +1,37 @@
 {% layout 'layout.liquid'%}
 {% block content %}
 <div>
-    <h2 class="display-6">All Examples</h2>
+    <h2 class="display-6">All Games</h2>
     <div class="row">
-        {% for example in examples %}
+        {% for game in games %}
         <div class="card" style="width: 18rem;">
-            <h5 class="card-header">{{ example.title }}</h5>
+            <h5 class="card-header">{{ game.title }}</h5>
             <div class="card-body">
-                <h5 class="card-title">
-                    Ready?: {{ example.ready }}
-                </h5>
+                <p><img src="{{game.img}}"></p>
                 <p class="card-text">
-                    Body: {{ example.body }}
+                Description: 
+                    {{ game.description }}
                 </p>
                 <p class="card-text">
-                    Amount: {{ example.amount }}
+                    System: {{ game.system }}
                 </p>
-                <a href="/examples/{{ example.id }}" class="btn btn-info">
-                    View {{ example.title }}
+                <p class="card-text">
+                    Genres: {{ game.genres | join: ", "}}
+                </p>
+                <p class="card-text">
+                    Creators: {{ game.creators }}
+                </p>
+                <p class="card-text">
+                    Publisher: {{ game.publisher }}
+                </p>
+                <p class="card-text">
+                    Types: {{ game.types | join: ", "}}
+                </p>
+                <p class="card-text">
+                    Players: {{ game.players }}
+                </p>
+                <a href="/games/{{ game.id }}" class="btn btn-info">
+                    View {{ game.title }}
                 </a>
             </div>
         </div>
