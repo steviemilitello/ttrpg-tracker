@@ -1,0 +1,24 @@
+{% block content %}
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a href="/" class="navbar-brand">Examplr</a>
+        {% if loggedIn %}
+        <a href="/examples/mine" class="nav-link text-light">Hello {{ username }} </a>
+        {% endif %}
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            {% if loggedIn %}
+                <a href="/games" class="nav-link text-light">View All</a>
+                <a href="/games/new" class="nav-link text-light">New</a>
+                <a href="/games/mine" class="nav-link text-light">My Examples</a>
+                <a href="/auth/logout" class="nav-link text-light">Log Out</a>
+            {% else %}
+                <a href="/auth/signup" class="nav-link text-light">Sign Up</a>
+                <a href="/auth/login" class="nav-link text-light">Sign In</a>
+            {% endif %}
+        </div>
+    </div>
+</nav>
+{% endblock %}
