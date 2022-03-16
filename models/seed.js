@@ -17,7 +17,7 @@ db.on('open', () => {
 	const startGames = [
         { name: "Coyote & Crow",
         description: "Coyote and Crow is a tabletop role playing game set in an alternate future of the Americas where colonization never occurred. Instead, advanced civilizations arose over hundreds of years after a massive climate disaster changed the history of the planet. You'll play as adventurers starting out in the city of Cahokia, a bustling, diverse metropolis along the Mississippi River. It's a world of science and spirituality where the future of technology and legends of the past will collide.",
-        img: "media/coyoteandcrow.jpeg",
+        img: "../../media/coyoteandcrow.jpeg",
         system: "Coyote & Crow",
         genres: ["Sci-Fi"],
         creators: ["Connor Alexander"],
@@ -27,7 +27,7 @@ db.on('open', () => {
         },
         { name: "Strixhaven: A Cirriculum of Chaos",
         description: "Strixhaven: A Curriculum of Chaos introduces the fantastical setting of Strixhaven University, drawn from the multiverse of Magic: The Gathering, and provides rules for creating characters who are students in one of its five colleges. Characters can explore the setting over the course of four adventures, which can be played together or on their own. Each adventure describes an academic year filled with scholarly pursuits, campus shenanigans, exciting friendships, hidden dangers, and perhaps even romance.",
-        img: "media/strixhaven.jpeg",
+        img: "media/strixhaven.png",
         system: "Dungeons & Dragons 5th Edition",
         genres: ["Fantasy"],
         creators: ["Wizards of the Coast"],

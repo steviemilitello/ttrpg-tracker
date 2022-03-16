@@ -11,7 +11,7 @@ const gamesSchema = new Schema(
 	{
 		name: { type: String, required: true },
 		description: { type: String, required: true },
-        img: String, 
+        img: { type: String },
         system: { type: String, required: true },
         genres: [ String ],
         creators: [ String ],

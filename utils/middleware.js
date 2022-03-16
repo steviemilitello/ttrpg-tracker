@@ -21,6 +21,7 @@ const middleware = (app) => {
 	app.use(express.urlencoded({ extended: false }))
 	app.use(express.static('public'))
 	app.use(express.static('images'))
+	app.use(express.static('media'))
 	app.use(
 		session({
 			secret: process.env.SECRET,

@@ -60,7 +60,7 @@ router.get('/mine', (req, res) => {
 			const username = req.session.username
 			const loggedIn = req.session.loggedIn
 
-			res.render('fruits/index', { games, username, loggedIn })
+			res.render('games/index', { games, username, loggedIn })
 		})
 		// show an error if there is one
 		.catch((error) => {
@@ -86,6 +86,33 @@ router.post('/', (req, res) => {
 			console.log('this was returned from create', game)
 			res.redirect('/games')
 		})
+		.catch((err) => {
+			console.log(err)
+			res.json({ err })
+		})
+})
+
+// edit route -> GET that takes us to the edit form view
+
+// update route -> sends a put request to our database
+
+// show route
+
+router.get('/:id', (req, res) => {
+	// first, we need to get the id
+	const gameId = req.params.id
+	// then we can find a fruit by its id
+	Game.findById(gameId)
+	// .populate('comments.author')
+		// once found, we can render a view with the data
+		.then((game) => {
+			console.log('the game we got\n', game)
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			const userId = req.session.userId
+			res.render('games/show', { game, username, loggedIn, userId })
+		})
+		// if there is an error, show that instead
 		.catch((err) => {
 			console.log(err)
 			res.json({ err })
