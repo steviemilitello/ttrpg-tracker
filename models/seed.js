@@ -4,10 +4,6 @@
 
 const mongoose = require('./connection')
 const Game = require('./games')
-const middleware = require('./utils/middleware')
-
-app.use(express.static('public'))
-app.use(express.static('media'))
 
 /////////////////////////////////////////////////
 ////////////// SEED CODE ////////////////////////
@@ -31,7 +27,7 @@ db.on('open', () => {
         },
         { name: "Strixhaven: A Cirriculum of Chaos",
         description: "Strixhaven: A Curriculum of Chaos introduces the fantastical setting of Strixhaven University, drawn from the multiverse of Magic: The Gathering, and provides rules for creating characters who are students in one of its five colleges. Characters can explore the setting over the course of four adventures, which can be played together or on their own. Each adventure describes an academic year filled with scholarly pursuits, campus shenanigans, exciting friendships, hidden dangers, and perhaps even romance.",
-        img: "../../media/strixhaven.png",
+        img: "../../media/coyoteandcrow.jpeg",
         system: "Dungeons & Dragons 5th Edition",
         genres: ["Fantasy"],
         creators: ["Wizards of the Coast"],

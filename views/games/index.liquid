@@ -36,6 +36,7 @@
                     Players: {{ game.players }}
                 </p>
                 <p><a href="/games/{{ game._id }}" class="btn btn-success">View {{ game.name }}</a></p>
+                <p><a href="/games/mine{{ game._id }}" class="btn btn-success">Add {{ game.name }} to My Games</a></p>
             </div>
         </div>
         {% endfor %}

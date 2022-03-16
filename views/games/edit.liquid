@@ -3,67 +3,61 @@
 <div class="container-sm">
     <form action="/games" method="POST">
         <fieldset>
-            <legend>Add New Game</legend>
-            <p><label class="form-label">Image: </label></p>
+            <legend class="game-header">Add New Game</legend>
+            <p><img src="{{ game.img }}"></p>
+            <p><label class="form-label">Edit Image: </label></p>
             <p>
             <input 
                 type="file" 
                 name="img" 
                 class="form-control-file"
             ></p>
-            <p><label class="form-label">Name: </label>
+            <p><label class="form-label">Edit Name: </label>
             <input 
                 type="text" 
                 name="name" 
                 value="{{ game.name }}"
                 class="form-control"
             ></p>
-            <p><label class="form-label">Description:</label>
-            <textarea 
-                type="text" 
-                name="description" 
-                value="{{ game.description }}"
-                rows="3"
-                class="form-control"
-            >
-            </textarea>
+            <p><label class="form-label">Edit Description:</label>
+            <textarea type="text" name="description" value="{{ game.description }}" rows="3" class="form-control"></textarea>
             </p>
-            <p><label class="form-label">System:</label>
+            <p><label class="form-label">Edit System:</label>
             <input 
                 type="text" 
                 name="system" 
                 value="{{ game.system }}"
                 class="form-control"
             ></p>
-            <label class="form-label">Genres:</label>
+            <label class="form-label">Edit Genres:</label>
             <input 
                 type="text" 
                 name="genres" 
                 value="{{ game.genres }}"
                 class="form-control"
             ></p>
-            <p><label class="form-label">Creators:</label>
+            <p><label class="form-label">Edit Creators:</label>
             <input 
                 type="text" 
                 name="creators" 
                 value="{{ game.creators }}"
                 class="form-control"
             ></p>
-            <p><label class="form-label">Publisher:</label>
+            <p><label class="form-label">Edit Publisher:</label>
                 <input 
                     type="text" 
                     name="publisher" 
                     value="{{ game.publisher }}"
                     class="form-control"
                 ></p>
-            <p><label class="form-label">Types:</label>
+            <p><label class="form-label">Edit Types:</label>
             <input 
                 type="text" 
                 name="types" 
                 placeholder="enter types such as GM, GM-Less, Solo, Module, Supplement etc. (separate with a comma)" 
                 class="form-control"
             ></p>
-            <p><label class="form-label">Players:</label>
+            <p><label class="form-label">Edit Players:</label>
             <input 
                 type="text" 
                 name="players" 
@@ -71,7 +65,7 @@
                 class="form-control"
             ></p>
         </fieldset>
-        <input type="submit" value="Add New Game" class="btn btn-success">
+        <input type="submit" value="Edit Game" class="btn btn-success">
     </form>
 </div>
 {% endblock %}

@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 		.then((games) => {
 			const username = req.session.username
 			const loggedIn = req.session.loggedIn
-			console.log(games.img)
+			console.log("this is the game image", games.img)
 			res.render('games/index', { games, username, loggedIn })
 		})
 		// show an error if there is one
