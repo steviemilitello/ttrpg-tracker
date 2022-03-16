@@ -32,3 +32,15 @@ body {
 .form-control-file {
     color: white;
 }
+
+.index-img {
+    width: 100%;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.edit-page-buttons {
+    text-align: center;
+}

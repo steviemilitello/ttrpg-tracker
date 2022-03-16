@@ -152,6 +152,23 @@ app.get('/:id', (req, res) => {
 		})
 })
 
+// delete route
+
+app.delete('/:id', (req, res) => {
+	// get the fruit id
+	const gameId = req.params.id
+	// delete the fruit
+	Game.findByIdAndRemove(gameId)
+		.then((game) => {
+			console.log('this is the response from FBID', game)
+			res.redirect('/games')
+		})
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
 /////////////////////////////////////////////////
 ////////////// EXPORT app ////////////////////
 /////////////////////////////////////////////////

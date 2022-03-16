@@ -2,24 +2,33 @@
 {% block content %}
 <div class="container-md">
     <article>
-        <p><img src="{{game.img}}"> </p>
-        <h5 class="show-h5"> Name: {{ game.name }} </h5>
-        <h5 class="show-h5" >Description: {{ game.description }}</h5>
-        <h5 class="show-h5">System: {{ game.system }}</h5>
-        <h5 class="show-h5">Genres: {{ game.genres | join: ", "}}</h5>
-        <h5 class="show-h5"> Creators: {{ game.creators }}</h5>
-        <h5 class="show-h5"> Publisher: {{ game.publisher }}</h5>
-        <h5 class="show-h5"> Types: {{ game.types | join: ", "}}</h5>
-        <h5 class="show-h5" > Players: {{ game.players }} </h5>
-        {% if game.owner == userId %}
-        <div class="btn-group">
-
-            <a href="/games/{{ game.id }}/edit" class="btn btn-primary">Edit</a>
-            <form action="/games/{{ game.id }}?_method=DELETE" method="POST">
-                <input type="submit" value="Delete" class="btn btn-danger">
-            </form>
-        </div>
-        {% endif %}
+        <div class="card mb-12" style="max-width: 1200px;">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <img src="{{ game.img }}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                  <h5 class="card-title">{{ game.name }}</h5>
+                  <p class="card-text">Description: {{ game.description }}</p>
+                  <p class="card-text">System: {{ game.system }}</p>
+                  <p class="card-text">Genres: {{ game.genres | join: ", "}}</p>
+                  <p class="card-text">Creators: {{ game.creators | join: ", " }}</p>
+                  <p class="card-text">{{ game.publisher }}</p>
+                  <p class="card-text">{{ game.types | join: ", "}}</p>
+                  <p class="card-text">Players: {{ game.players }}</p>
+                  {% if game.owner == userId %}
+                  <div class="btn group">
+                    <a href="/games/{{ game.id }}/edit" class="btn btn-primary">Edit</a>
+                    <form action="/games/{{ game.id }}?_method=DELETE" method="POST">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                    </form>
+                {% endif %}
+                </div>
+            </div>
+          </div>
+        </div>  
     </article>
 </div>
 {% endblock %}
+

@@ -1,42 +1,15 @@
 {% layout 'layout.liquid'%}
 {% block content %}
 <div>
-    <h2 class="display-6">All Games</h2>
+    <h2 class="display-6">Games</h2>
     <div class="row">
         {% for game in games %}
         <div class="card" style="width: 18rem;">
             <h5 class="card-header">{{ game.name }}</h5>
             <div class="card-body">
-                <p><img src="{{ game.img }}"></p>
-                <p class="card-text">
-                <p>Description:</p>
-                    <small>{{ game.description }}</small>
-                </p>
-                <p class="card-text">
-                    System:
-                        {{ game.system }}
-                </p>
-                <p class="card-text">
-                    Genres:
-                        {{ game.genres | join: ", "}}
-                </p>
-                <p class="card-text">
-                    Creators:
-                        {{ game.creators }}
-                </p>
-                <p class="card-text">
-                    Publisher:
-                    {{ game.publisher }}
-                </p>
-                <p class="card-text">
-                    Types:
-                    {{ game.types | join: ", "}}
-                </p>
-                <p class="card-text">
-                    Players: {{ game.players }}
-                </p>
-                <p><a href="/games/{{ game._id }}" class="btn btn-success">View {{ game.name }}</a></p>
-                <p><a href="/games/mine{{ game._id }}" class="btn btn-success">Add {{ game.name }} to My Games</a></p>
+                <p><img class="index-img" src="{{ game.img }}"></p>
+                <a href="/games/{{ game._id }}" class="btn btn-success">View Details</a>
+                <a href="/games/mine{{ game._id }}" class="btn btn-success">+</a>
             </div>
         </div>
         {% endfor %}
