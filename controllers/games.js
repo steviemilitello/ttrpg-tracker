@@ -40,7 +40,7 @@ router.get('/', (req, res) => {
 		.then((games) => {
 			const username = req.session.username
 			const loggedIn = req.session.loggedIn
-			console.log(games)
+			console.log(games.img)
 			res.render('games/index', { games, username, loggedIn })
 		})
 		// show an error if there is one
@@ -93,8 +93,40 @@ router.post('/', (req, res) => {
 })
 
 // edit route -> GET that takes us to the edit form view
+router.get('/:id/edit', (req, res) => {
+	// we need to get the id
+	const gameId = req.params.id
+	// find the fruit
+	Game.findById(gameId)
+		// -->render if there is a fruit
+		.then((game) => {
+			console.log('edit game', game)
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			res.render('games/edit', { fruit, username, loggedIn })
+		})
+		// -->error if no fruit
+		.catch((err) => {
+			console.log(err)
+			res.json(err)
+		})
+})
 
 // update route -> sends a put request to our database
+router.put('/:id', (req, res) => {
+	// get the id
+	const gameId = req.params.id
+	// tell mongoose to update the game
+	Game.findByIdAndUpdate(fruitId, req.body, { new: true })
+		// if successful -> redirect to the fruit page
+		.then((game) => {
+			console.log('the updated game', game)
+
+			res.redirect(`/games/${game.id}`)
+		})
+		// if an error, display that
+		.catch((error) => res.json(error))
+})
 
 // show route
 

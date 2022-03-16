@@ -1,7 +1,7 @@
 {% layout 'layout.liquid' %}
 {% block content %}
 <div class="container-sm">
-    <form action="/examples" method="POST">
+    <form action="/games" method="POST">
         <fieldset>
             <legend>Add New Game</legend>
             <p><label class="form-label">Image: </label></p>
@@ -9,7 +9,6 @@
             <input 
                 type="file" 
                 name="img" 
-                placeholder="enter image url"
                 class="form-control-file"
             ></p>
             <p><label class="form-label">Name: </label>
@@ -50,6 +49,13 @@
                 placeholder="enter creators (separate with a comma)" 
                 class="form-control"
             ></p>
+            <p><label class="form-label">Publisher:</label>
+                <input 
+                    type="text" 
+                    name="publisher" 
+                    placeholder="enter publisher" 
+                    class="form-control"
+                ></p>
             <p><label class="form-label">Types:</label>
             <input 
                 type="text" 
@@ -60,7 +66,7 @@
             <p><label class="form-label">Players:</label>
             <input 
                 type="text" 
-                name="creators" 
+                name="players" 
                 placeholder="enter # of players needed" 
                 class="form-control"
             ></p>
