@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/error', (req, res) => {
-	const error = req.query.error || 'This Page Does Not Exist'
+	const error = req.query.error || 'You rolled a natural 1, you cannot find the page you are looking for'
     const { username, loggedIn, userId } = req.session
 	res.render('error.liquid', { error, username, loggedIn, userId })
 })

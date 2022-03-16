@@ -3,17 +3,18 @@
     <div class="container-fluid">
         <a href="/" class="navbar-brand">TTRPG Game Tracker</a>
         {% if loggedIn %}
-        <a href="/examples/mine" class="nav-link text-light">Hello {{ username }} </a>
+        <a href="/games/mine" class="nav-link text-light">{{ username }} </a>
         {% endif %}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             {% if loggedIn %}
-                <a href="/games" class="nav-link text-light">All Games</a>
-                <a href="/games/new" class="nav-link text-light">Add New Game</a>
-                <a href="/games/mine" class="nav-link text-light">My Games</a>
-                <a href="/auth/logout" class="nav-link text-light">Log Out</a>
+                <a href="/games" class="nav-link">All Games</a>
+                <a href="/games/new" class="nav-link">Add New Game</a>
+                <a href="/games/mine" class="nav-link">My Games</a>
+                <a class="btn btn-success" href="/auth/logout"" role="button">Sign Out</a>
+                <!-- <a href="/auth/logout" class="nav-link">Log Out</a> -->
             {% else %}
                 <a href="/auth/signup" class="nav-link text-light">Sign Up</a>
                 <a href="/auth/login" class="nav-link text-light">Sign In</a>

@@ -1,0 +1,22 @@
+body {
+    background-color: #181c20;
+}
+
+.nav-link {
+    color: #818894;
+    font-family: Helvetica; 
+}
+
+.navbar-brand {
+    font-family: Helvetica; 
+    font-size: 25px
+
+}
+
+.display-6 {
+    color: white; 
+}
+
+.show-h5 {
+    color: white;
+}

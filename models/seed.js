@@ -4,6 +4,10 @@
 
 const mongoose = require('./connection')
 const Game = require('./games')
+const middleware = require('./utils/middleware')
+
+app.use(express.static('public'))
+app.use(express.static('media'))
 
 /////////////////////////////////////////////////
 ////////////// SEED CODE ////////////////////////

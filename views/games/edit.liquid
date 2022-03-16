@@ -1,43 +1,77 @@
 {% layout 'layout.liquid' %}
 {% block content %}
 <div class="container-sm">
-    <form action="/examples" method="POST">
+    <form action="/games" method="POST">
         <fieldset>
-            <legend>Create New Example</legend>
-            <label class="form-label">Title: </label>
+            <legend>Add New Game</legend>
+            <p><label class="form-label">Image: </label></p>
+            <p>
+            <input 
+                type="file" 
+                name="img" 
+                class="form-control-file"
+            ></p>
+            <p><label class="form-label">Name: </label>
             <input 
                 type="text" 
-                name="title" 
-                placeholder="{{ example.title }}"
-                value="{{ example.title }}"
+                name="name" 
+                value="{{ game.name }}"
+                class="form-control"
+            ></p>
+            <p><label class="form-label">Description:</label>
+            <textarea 
+                type="text" 
+                name="description" 
+                value="{{ game.description }}"
+                rows="3"
                 class="form-control"
             >
-            <label class="form-label">Body:</label>
+            </textarea>
+            </p>
+            <p><label class="form-label">System:</label>
             <input 
                 type="text" 
-                name="body" 
-                placeholder="{{ example.body }}" 
-                value="{{ example.body }}" 
+                name="system" 
+                value="{{ game.system }}"
                 class="form-control"
-            >
-            <label class="form-label">Amount:</label>
+            ></p>
+            <label class="form-label">Genres:</label>
             <input 
-                type="number" 
-                name="amount"
-                value="{{ example.amount }}"
+                type="text" 
+                name="genres" 
+                value="{{ game.genres }}"
                 class="form-control"
-            >
-            <label class="form-label">Ready:</label>
+            ></p>
+            <p><label class="form-label">Creators:</label>
             <input 
-                type="checkbox" 
-                name="ready" 
-                class="form-check-input"
-                {% if example.ready %}
-                    checked
-                {% endif %}
-            >
+                type="text" 
+                name="creators" 
+                value="{{ game.creators }}"
+                class="form-control"
+            ></p>
+            <p><label class="form-label">Publisher:</label>
+                <input 
+                    type="text" 
+                    name="publisher" 
+                    value="{{ game.publisher }}"
+                    class="form-control"
+                ></p>
+            <p><label class="form-label">Types:</label>
+            <input 
+                type="text" 
+                name="types" 
+                placeholder="enter types such as GM, GM-Less, Solo, Module, Supplement etc. (separate with a comma)" 
+                class="form-control"
+            ></p>
+            <p><label class="form-label">Players:</label>
+            <input 
+                type="text" 
+                name="players" 
+                value="{{ game.players }}"
+                class="form-control"
+            ></p>
         </fieldset>
-        <input type="submit" value="Edit Example" class="btn btn-success">
+        <input type="submit" value="Add New Game" class="btn btn-success">
     </form>
 </div>
 {% endblock %}

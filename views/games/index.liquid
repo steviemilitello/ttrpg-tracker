@@ -35,9 +35,7 @@
                 <p class="card-text">
                     Players: {{ game.players }}
                 </p>
-                <a href="/games/{{ game.id }}" class="btn btn-success">
-                    View {{ game.title }}
-                </a>
+                <p><a href="/games/{{ game._id }}" class="btn btn-success">View {{ game.name }}</a></p>
             </div>
         </div>
         {% endfor %}

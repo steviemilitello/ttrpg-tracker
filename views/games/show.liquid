@@ -3,19 +3,19 @@
 <div class="container-md">
     <article>
         <p><img src="{{game.img}}"> </p>
-        <h5> Name: {{ game.name }} </h5>
-        <h5>Description: {{ game.description }}</h5>
-        <h5>System: {{ game.system }}</h5>
-        <h5>Genres: {{ game.genres | join: ", "}}</h5>
-        <h5> Creators: {{ game.creators }}</h5>
-        <h5> Publisher: {{ game.publisher }}</h5>
-        <h5> Types: {{ game.types | join: ", "}}</h5>
-        <h5> Players: {{ game.players }} </h5>
+        <h5 class="show-h5"> Name: {{ game.name }} </h5>
+        <h5 class="show-h5" >Description: {{ game.description }}</h5>
+        <h5 class="show-h5">System: {{ game.system }}</h5>
+        <h5 class="show-h5">Genres: {{ game.genres | join: ", "}}</h5>
+        <h5 class="show-h5"> Creators: {{ game.creators }}</h5>
+        <h5 class="show-h5"> Publisher: {{ game.publisher }}</h5>
+        <h5 class="show-h5"> Types: {{ game.types | join: ", "}}</h5>
+        <h5 class="show-h5" > Players: {{ game.players }} </h5>
         {% if game.owner == userId %}
         <div class="btn-group">
 
-            <a href="/examples/{{ example.id }}/edit" class="btn btn-primary">Edit</a>
-            <form action="/examples/{{ example.id }}?_method=DELETE" method="POST">
+            <a href="/games/{{ game.id }}/edit" class="btn btn-primary">Edit</a>
+            <form action="/games/{{ game.id }}?_method=DELETE" method="POST">
                 <input type="submit" value="Delete" class="btn btn-danger">
             </form>
         </div>

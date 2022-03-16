@@ -6,18 +6,18 @@ const express = require('express')
 const Game = require('../models/games')
 
 /////////////////////////////////////////////////
-////////////// ROUTER ///////////////////////////
+////////////// app ///////////////////////////
 /////////////////////////////////////////////////
 
-const router = express.Router()
+const app = require("liquid-express-views")(express())
 
 /////////////////////////////////////////////////
-////////////// ROUTER MIDDLEWARE ////////////////
+////////////// app MIDDLEWARE ////////////////
 /////////////////////////////////////////////////
 
 // create some middleware to protect these routes
 // Authorization middleware
-router.use((req, res, next) => {
+app.use((req, res, next) => {
 	// checking the logged in boolean of our session
 	if (req.session.loggedIn) {
 		// if they're logged in, go to the next thing(thats the controller)
@@ -33,9 +33,10 @@ router.use((req, res, next) => {
 /////////////////////////////////////////////////
 
 // index all games
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
 	// find the games
 	Game.find({})
+		Game.aggregate( [ { $sort : { name : 1 } } ] )
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -51,7 +52,7 @@ router.get('/', (req, res) => {
 })
 
 // index that shows only the user's games
-router.get('/mine', (req, res) => {
+app.get('/mine', (req, res) => {
 	// find the games
 	Game.find({ owner: req.session.userId })
 		// then render a template AFTER they're found
@@ -70,14 +71,14 @@ router.get('/mine', (req, res) => {
 })
 
 // new route -> GET route that renders our page with the form
-router.get('/new', (req, res) => {
+app.get('/new', (req, res) => {
 	const username = req.session.username
 	const loggedIn = req.session.loggedIn
 	res.render('games/new', { username, loggedIn })
 })
 
 // create -> POST route that actually calls the db and makes a new document
-router.post('/', (req, res) => {
+app.post('/', (req, res) => {
 	// and since we've stored the id of the user in the session object
 	// we can use it to set the owner property of the game upon creation.
 	req.body.owner = req.session.userId
@@ -93,19 +94,19 @@ router.post('/', (req, res) => {
 })
 
 // edit route -> GET that takes us to the edit form view
-router.get('/:id/edit', (req, res) => {
+app.get('/:id/edit', (req, res) => {
 	// we need to get the id
 	const gameId = req.params.id
-	// find the fruit
+	// find the game
 	Game.findById(gameId)
-		// -->render if there is a fruit
+		// -->render if there is a game
 		.then((game) => {
 			console.log('edit game', game)
 			const username = req.session.username
 			const loggedIn = req.session.loggedIn
-			res.render('games/edit', { fruit, username, loggedIn })
+			res.render('games/edit', { game, username, loggedIn })
 		})
-		// -->error if no fruit
+		// -->error if no game
 		.catch((err) => {
 			console.log(err)
 			res.json(err)
@@ -113,12 +114,12 @@ router.get('/:id/edit', (req, res) => {
 })
 
 // update route -> sends a put request to our database
-router.put('/:id', (req, res) => {
+app.put('/:id', (req, res) => {
 	// get the id
 	const gameId = req.params.id
 	// tell mongoose to update the game
 	Game.findByIdAndUpdate(fruitId, req.body, { new: true })
-		// if successful -> redirect to the fruit page
+		// if successful -> redirect to the game page
 		.then((game) => {
 			console.log('the updated game', game)
 
@@ -130,7 +131,7 @@ router.put('/:id', (req, res) => {
 
 // show route
 
-router.get('/:id', (req, res) => {
+app.get('/:id', (req, res) => {
 	// first, we need to get the id
 	const gameId = req.params.id
 	// then we can find a fruit by its id
@@ -152,8 +153,8 @@ router.get('/:id', (req, res) => {
 })
 
 /////////////////////////////////////////////////
-////////////// EXPORT ROUTER ////////////////////
+////////////// EXPORT app ////////////////////
 /////////////////////////////////////////////////
 
-module.exports = router
+module.exports = app
 
