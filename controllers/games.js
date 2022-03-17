@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 		.then((games) => {
 			const username = req.session.username
 			const loggedIn = req.session.loggedIn
-			console.log("this is the game image", games.img)
+			console.log(games)
 			res.render('games/index', { games, username, loggedIn })
 		})
 		// show an error if there is one
@@ -50,6 +50,24 @@ app.get('/', (req, res) => {
 			res.json({ error })
 		})
 })
+
+// // index all games - sort by system: dungeons and dragons 5th edition
+// app.get('games/dnd', (req, res) => {
+// 	// find the games
+// 	Game.find({ system: "Dungeons & Dragons 5th Edition" })
+// 		// render template after they are found
+// 		.then((games) => {
+// 			const username = req.session.username
+// 			const loggedIn = req.session.loggedIn
+// 			console.log(games)
+// 			res.render('games/index', { games, username, loggedIn })
+// 		})
+// 		// show an error if there is one
+// 		.catch((error) => {
+// 			console.log(error)
+// 			res.json({ error })
+// 		})
+// })
 
 // index that shows only the user's games
 app.get('/mine', (req, res) => {
@@ -118,7 +136,7 @@ app.put('/:id', (req, res) => {
 	// get the id
 	const gameId = req.params.id
 	// tell mongoose to update the game
-	Game.findByIdAndUpdate(fruitId, req.body, { new: true })
+	Game.findByIdAndUpdate(gameId, req.body, { new: true })
 		// if successful -> redirect to the game page
 		.then((game) => {
 			console.log('the updated game', game)
@@ -134,9 +152,9 @@ app.put('/:id', (req, res) => {
 app.get('/:id', (req, res) => {
 	// first, we need to get the id
 	const gameId = req.params.id
-	// then we can find a fruit by its id
+	// then we can find a game by its id
 	Game.findById(gameId)
-	// .populate('comments.author')
+	.populate('comments.author')
 		// once found, we can render a view with the data
 		.then((game) => {
 			console.log('the game we got\n', game)
@@ -155,9 +173,9 @@ app.get('/:id', (req, res) => {
 // delete route
 
 app.delete('/:id', (req, res) => {
-	// get the fruit id
+	// get the game id
 	const gameId = req.params.id
-	// delete the fruit
+	// delete the game
 	Game.findByIdAndRemove(gameId)
 		.then((game) => {
 			console.log('this is the response from FBID', game)
@@ -174,4 +192,3 @@ app.delete('/:id', (req, res) => {
 /////////////////////////////////////////////////
 
 module.exports = app
-

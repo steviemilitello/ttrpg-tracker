@@ -4,6 +4,9 @@ const mongoose = require('./connection')
 // import user model for populate
 const User = require('./games')
 
+// import comment schema
+const commentSchema = require('./comment')
+
 // destructure the schema and model constructors from mongoose
 const { Schema, model } = mongoose
 
@@ -21,7 +24,8 @@ const gamesSchema = new Schema(
 		owner: {
 			type: Schema.Types.ObjectID,
 			ref: 'User',
-		}
+		},
+		comments: [commentSchema]
 	},
 	{ timestamps: true }
 )
