@@ -6,13 +6,13 @@ const express = require('express')
 const Game = require('../models/games')
 
 /////////////////////////////////////////////////
-////////////// app ///////////////////////////
+////////////// APP //////////////////////////////
 /////////////////////////////////////////////////
 
 const app = require("liquid-express-views")(express())
 
 /////////////////////////////////////////////////
-////////////// app MIDDLEWARE ////////////////
+////////////// APP MIDDLEWARE ///////////////////
 /////////////////////////////////////////////////
 
 // create some middleware to protect these routes
@@ -51,23 +51,60 @@ app.get('/', (req, res) => {
 		})
 })
 
-// // index all games - sort by system: dungeons and dragons 5th edition
-// app.get('games/dnd', (req, res) => {
-// 	// find the games
-// 	Game.find({ system: "Dungeons & Dragons 5th Edition" })
-// 		// render template after they are found
-// 		.then((games) => {
-// 			const username = req.session.username
-// 			const loggedIn = req.session.loggedIn
-// 			console.log(games)
-// 			res.render('games/index', { games, username, loggedIn })
-// 		})
-// 		// show an error if there is one
-// 		.catch((error) => {
-// 			console.log(error)
-// 			res.json({ error })
-// 		})
-// })
+// index  - sort by system: coyote & crow
+app.get('/coyoteandcrow', (req, res) => {
+	// find the games
+	Game.find({ system: "Coyote & Crow" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// index  - sort by system: dungeons and dragons 5th edition
+app.get('/dnd', (req, res) => {
+	// find the games
+	Game.find({ system: "Dungeons & Dragons 5th Edition" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+
+// index  - sort by system: powered by zweihander
+app.get('/poweredbyzweihander', (req, res) => {
+	// find the games
+	Game.find({ system: "Powered by Zweihander" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
 
 // index that shows only the user's games
 app.get('/mine', (req, res) => {
@@ -188,7 +225,7 @@ app.delete('/:id', (req, res) => {
 })
 
 /////////////////////////////////////////////////
-////////////// EXPORT app ////////////////////
+////////////// EXPORT APP ///////////////////////
 /////////////////////////////////////////////////
 
 module.exports = app

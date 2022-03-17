@@ -1,12 +1,12 @@
 {% block content %}
-    <div class="card mb-4 shadow">
+    <div class="card mb-8 shadow">
         <div class="card-body">
-            <p>{{ comment.note }}</p>
             <div class="d-flex justify-content-between">
-                <small>author: {{ comment.author.username }}</small>
+                <p><small class="align-self-start">{{ comment.author.username }}</small>
                 {% if comment.author == userId %}
                     <form action="/comments/delete/{{ game.id }}/{{ comment._id }}?_method=DELETE" method="POST">
-                        <input type="submit" value="X">
+                        <input class="btn-close" aria-label="Close" type="submit" value=""></p>
+                    <p class="align-self-end">{{ comment.note }}</p>
                     </form>
                 {% endif %}
             </div>

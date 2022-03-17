@@ -24,14 +24,14 @@
                         <input type="submit" value="Delete" class="btn btn-danger">
                     </form>
                 {% endif %}
-                <div class="col-md-6">
+                <div class="col-md-12">
+                  <h4 class="text-start">Comments</h4>
                   <form action="/comments/{{game.id}}" method="POST">
                       <fieldset>
-                          <legend>Add Comment</legend>
                           <label class="form-label">Comment: </label>
-                          <input type="text" class="form-control" name="note" placeholder="enter comment here...">
+                          <p><textarea type="text" name="note" placeholder="enter comment here" rows="3"class="form-control"></textarea></p>
                       </fieldset>
-                      <input type="submit" class="btn btn-success" value="Add Comment">
+                     <p><input type="submit" class="btn btn-success" value="Add Comment"></p>
                   </form>
               </div>
                <!-- we need an if statement -->
@@ -40,7 +40,7 @@
         {% if game.comments.length > 0%}
         <!-- here we'll add our comment container -->
         <div class="container-sm justify-content-center">
-            <div class="col-md-8 col-lg-6">
+            <div class="col-md-8 col-lg-12">
                 <!-- here we need to loop over the comments -->
                 <!-- for every comment render a comment.liquid block -->
                 {% for comment in game.comments %}

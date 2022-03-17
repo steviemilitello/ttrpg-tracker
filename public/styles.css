@@ -44,3 +44,7 @@ body {
 .edit-page-buttons {
     text-align: center;
 }
+
+.btn-close {
+    float: right;
+}

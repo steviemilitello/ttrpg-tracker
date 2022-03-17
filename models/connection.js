@@ -1,3 +1,7 @@
+/////////////////////////////////////////////////
+////////////// CONNECTION ///////////////////////
+/////////////////////////////////////////////////
+
 // make our .env variables available via process.env
 require('dotenv').config()
 // import mongoose
@@ -17,5 +21,8 @@ db.on('open', () => console.log('You are connected to mongo'))
 db.on('close', () => console.log('You are disconnected from mongo'))
 db.on('error', (error) => console.log(error))
 
-// export the connection
+/////////////////////////////////////////////////
+////////////// EXPORT CONNECTION ////////////////
+/////////////////////////////////////////////////
+
 module.exports = mongoose
