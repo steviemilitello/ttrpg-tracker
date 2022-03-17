@@ -1,15 +1,15 @@
 {% layout 'layout.liquid'%}
 {% block content %}
 <div>
-    <h2 class="display-6">Games</h2>
+    <p><h2 class="display-6">Games</h2></p>
     <div class="row">
         {% for game in games %}
         <div class="card" style="width: 18rem;">
             <h5 class="card-header">{{ game.name }}</h5>
             <div class="card-body">
                 <p><img class="index-img" src="{{ game.img }}"></p>
-                <a href="/games/{{ game._id }}" class="btn btn-success">View Details</a>
-                <a href="/games/mine{{ game._id }}" class="btn btn-success">+</a>
+                <a href="/games/{{ game._id }}" class="btn btn-secondary">View</a>
+                <a href="/games/mine{{ game._id }}" class="btn btn-secondary">+</a>
             </div>
         </div>
         {% endfor %}
