@@ -33,7 +33,7 @@ body {
     color: white;
 }
 
-.index-img {
+.card-img-top {
     width: 100%;
 }
 
@@ -47,4 +47,8 @@ body {
 
 .btn-close {
     float: right;
+}
+
+.index-section {
+    color: white;
 }

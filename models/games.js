@@ -29,9 +29,10 @@ const gamesSchema = new Schema(
         system: { type: String, required: true },
         genres: [ String ],
         creators: [ String ],
-        publisher: { type: String, required: true },
-		types: [ String ],
-        players: { type: Number, required: true },
+        publishers: [ String ],
+		gametypes: [ String ],
+		booktypes: [ String ],
+        players: { type: Number },
 		owner: {
 			type: Schema.Types.ObjectID,
 			ref: 'User',

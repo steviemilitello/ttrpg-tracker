@@ -4,6 +4,7 @@
 
 const express = require('express')
 const Game = require('../models/games')
+const fetch = require("node-fetch")
 
 /////////////////////////////////////////////////
 ////////////// APP //////////////////////////////
@@ -36,7 +37,7 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
 	// find the games
 	Game.find({})
-		Game.aggregate( [ { $sort : { name : 1 } } ] )
+		Game.aggregate( [ { $sort : { system : 1 } } ] )
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -73,6 +74,24 @@ app.get('/coyoteandcrow', (req, res) => {
 app.get('/dnd', (req, res) => {
 	// find the games
 	Game.find({ system: "Dungeons & Dragons 5th Edition" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// index  - sort by system: forged in iron
+app.get('/forgediniron', (req, res) => {
+	// find the games
+	Game.find({ system: "Forged in Iron" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
