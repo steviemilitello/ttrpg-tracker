@@ -24,6 +24,7 @@ middleware(app)
 ////////////// ROUTES ///////////////////////////
 /////////////////////////////////////////////////
 
+// all routes in controllers are prepended with first arguement of app.use 
 app.use('/auth', UserRouter)
 app.use('/games', GameRouter)
 app.use('/comments', CommentRouter)
@@ -34,7 +35,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/error', (req, res) => {
-	const error = req.query.error || 'You rolled a natural 1, you cannot find the page you are looking for'
+	const error = req.query.error || '<h1>You rolled a natural 1, you cannot find the page you are looking for<h1>'
     const { username, loggedIn, userId } = req.session
 	res.render('error.liquid', { error, username, loggedIn, userId })
 })

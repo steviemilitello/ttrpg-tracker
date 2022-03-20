@@ -4,7 +4,6 @@
 
 const express = require('express')
 const Game = require('../models/games')
-const fetch = require("node-fetch")
 
 /////////////////////////////////////////////////
 ////////////// APP //////////////////////////////
@@ -42,7 +41,7 @@ app.get('/', (req, res) => {
 		.then((games) => {
 			const username = req.session.username
 			const loggedIn = req.session.loggedIn
-			console.log(games)
+			// console.log(games)
 			res.render('games/index', { games, username, loggedIn })
 		})
 		// show an error if there is one
@@ -151,15 +150,31 @@ app.get('/new', (req, res) => {
 	res.render('games/new', { username, loggedIn })
 })
 
-// create -> POST route that actually calls the db and makes a new document
+// create -> POST route that actually calls the db and makes a new document for add new game page
 app.post('/', (req, res) => {
-	// and since we've stored the id of the user in the session object
-	// we can use it to set the owner property of the game upon creation.
 	req.body.owner = req.session.userId
 	Game.create(req.body)
 		.then((game) => {
 			console.log('this was returned from create', game)
 			res.redirect('/games')
+		})
+		.catch((err) => {
+			console.log(err)
+			res.json({ err })
+		})
+})
+
+// create -> POST route that actually calls the db and makes a new document to add to favorites/game collection
+app.post('/newfave', (req, res) => {
+	console.log("POST ROUTE HIT")
+	// and since we've stored the id of the user in the session object
+	// we can use it to set the owner property of the game upon creation.
+	req.body.owner = req.session.userId
+	console.log("this is what was from the form", req.body)
+	Game.create(req.body)
+		.then((game) => {
+			console.log('this was returned from create', game)
+			res.redirect('/games/mine')
 		})
 		.catch((err) => {
 			console.log(err)
@@ -235,7 +250,7 @@ app.delete('/:id', (req, res) => {
 	Game.findByIdAndRemove(gameId)
 		.then((game) => {
 			console.log('this is the response from FBID', game)
-			res.redirect('/games')
+			res.redirect('/games/mine')
 		})
 		.catch((error) => {
 			console.log(error)
