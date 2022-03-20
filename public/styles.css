@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Basteleur";
+    src: url("public/Basteleur-Bold.woff") format("woff"),
+  }
+
 body {
     background-color: #181c20;
 }
@@ -6,19 +11,46 @@ h1 {
     color: white;
 }
 
-.nav-link {
-    color: #818894;
-    font-family: Helvetica; 
+.navbar-brand {
+    font-family: 'Basteleur', sans-serif;
+    font-size: 25px;
+
 }
 
-.navbar-brand {
-    font-family: Helvetica; 
-    font-size: 25px
+.nav-link {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    color: slategrey;
+}
 
+.card-title {
+    font-family: 'Basteleur', sans-serif;
+    font-size: 30px;
+}
+
+.tab-content {
+    font-family: 'Oswald', sans-serif; 
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.edit-delete-form {
+    text-align: center;
+}
+
+.text-start {
+    font-family: 'Oswald', sans-serif; 
+    font-weight: 700;
+}
+
+.comment-submit {
+    text-align: right;
 }
 
 .display-6 {
+    font-family: 'Oswald', sans-serif; 
     color: white; 
+    font-weight: 300;
 }
 
 .show-h5 {
@@ -59,4 +91,13 @@ h1 {
 
 .vr {
     color: white;
+}
+
+.btn {
+    font-family: 'Oswald', sans-serif; 
+    font-weight: 700;
+}
+
+.error {
+    font-family: 'Oswald', sans-serif; 
 }

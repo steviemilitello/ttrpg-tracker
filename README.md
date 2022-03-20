@@ -1,6 +1,6 @@
 # PROJECT 2 #
 
-## TABLETOP RPG BOOK library TRACKER ##
+## TABLETOP RPG BOOK TRACKER ##
 
 **Example Image 1**
 
@@ -28,10 +28,6 @@
 - They want to be able to add new books to their library 
 - They want to be able to delete books from their collection
 - They want to be able to sort the books by name, genre, system, creator, type etc. 
-
-- Stretch Goal 
-- Letting users sort own library into folders/sub-collection
-- Being able to access their owned PDFs versions from the app either from a local directory where it is stored or from their Google Drive
 
 ### IMPLEMENTATION 
 

@@ -2,7 +2,7 @@
 {% block content %}
 <div class="container-md">
     <p><article>
-        <div class="card mb-12 p-3" style="max-width: 1200px;">
+        <div class="card mb-12 p-3" style="max-width: 1300px;">
             <div class="row g-0">
               <div class="col-md-5">
                 <img src="{{ game.img }}" class="img-fluid rounded-start" alt="...">
@@ -10,29 +10,54 @@
               <div class="col-md-7">
                 <div class="card-body">
                   <h5 class="card-title">{{ game.name }}</h5>
-                  <p class="card-text">Description: {{ game.description }}</p>
-                  <p class="card-text">System: {{ game.system }}</p>
-                  <p class="card-text">Genres: {{ game.genres | join: ", "}}</p>
-                  <p class="card-text">Creators: {{ game.creators | join: ", " }}</p>
-                  <p class="card-text">Publisher: {{ game.publishers | join: ", " }}</p>
-                  <p class="card-text">Game Types: {{ game.gametypes | join: ", "}}</p>
-                  <p class="card-text">Book Types: {{ game.booktypes | join: ", "}}</p>
-                  <p class="card-text">Number of Players: {{ game.players }}+</p>
-                  {% if game.owner == userId %}
-                  <div class="btn group">
-                    <a href="/games/{{ game.id }}/edit" class="btn btn-primary">Edit</a>
-                    <form action="/games/{{ game.id }}?_method=DELETE" method="POST">
-                        <input type="submit" value="Delete" class="btn btn-danger">
-                    </form>
-                {% endif %}
+                  <p class="card-text">{{ game.description }}</p>
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#system" role="tab" aria-controls="system" aria-selected="true">System</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="genres-tab" data-toggle="tab" href="#genres" role="tab" aria-controls="genres" aria-selected="false">Genres</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="creators-tab" data-toggle="tab" href="#creators" role="tab" aria-controls="creators" aria-selected="false">Creators</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="publishers-tab" data-toggle="tab" href="#publishers" role="tab" aria-controls="creators" aria-selected="false">Publishers</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="gametypes-tab" data-toggle="tab" href="#gametypes" role="tab" aria-controls="gametypes" aria-selected="false">Game Types</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="booktypes-tab" data-toggle="tab" href="#booktypes" role="tab" aria-controls="booktypes" aria-selected="false">Book Types</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="players-tab" data-toggle="tab" href="#players" role="tab" aria-controls="players" aria-selected="false">Players</a>
+                    </li>
+                  </ul>
+                  <p><div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="system" role="tabpanel" aria-labelledby="system-tab">{{ game.system }}</div>
+                    <div class="tab-pane fade" id="genres" role="tabpanel" aria-labelledby="genres-tab">{{ game.genres | join: ", "}}</div>
+                    <div class="tab-pane fade" id="creators" role="tabpanel" aria-labelledby="creators-tab">{{ game.creators | join: ", " }}</div>
+                    <div class="tab-pane fade" id="publishers" role="tabpanel" aria-labelledby="publishers-tab">{{ game.publishers | join: ", " }}</div>
+                    <div class="tab-pane fade" id="gametypes" role="tabpanel" aria-labelledby="gametypes-tab">{{ game.gametypes | join: ", " }}</div>
+                    <div class="tab-pane fade" id="booktypes" role="tabpanel" aria-labelledby="booktypes-tab">{{ game.booktypes | join: ", " }}</div>
+                    <div class="tab-pane fade" id="players" role="tabpanel" aria-labelledby="players-tab">{{ game.players}}+</div>
+                  </div></p>
                 <div class="col-md-12">
-                  <h4 class="text-start">Comments</h4>
+                  {% if game.owner == userId %}
+                    <p><form class="edit-delete-form" action="/games/{{ game.id }}?_method=DELETE" method="POST">
+                      <a href="/games/{{ game.id }}/edit" class="btn btn-primary">Edit</a>
+                      <input type="submit" value="Delete" class="btn btn-danger">
+                    </form></p>
+                {% endif %}
                   <form action="/comments/{{game.id}}" method="POST">
                       <fieldset>
                           <label class="form-label">Comment: </label>
+                          <h4 class="text-start">Comments</h4>
+                          <p></p>
                           <p><textarea type="text" name="note" placeholder="enter comment here" rows="3"class="form-control"></textarea></p>
                       </fieldset>
-                     <p><input type="submit" class="btn btn-success" value="Add Comment"></p>
+                     <p class="comment-submit"><input type="submit" class="btn btn-secondary" value="Add Comment"></p>
                   </form>
               </div>
                <!-- we need an if statement -->

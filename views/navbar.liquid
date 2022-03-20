@@ -1,7 +1,7 @@
 {% block content %}
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container-fluid">
-        <a href="/" class="navbar-brand">TTRPG Game Tracker</a>
+        <a href="/" class="navbar-brand"><i class="fa-solid fa-dice-d20"></i> TTRPG Tracker</a>
         {% if loggedIn %}
         <a href="/games/mine" class="nav-link text-light">{{ username }} </a>
         <div class="vr"></div>
@@ -17,7 +17,21 @@
                 <div class="vr"></div>
                 <a href="/games/new" class="nav-link">Add New Game</a>
                 <div class="vr"></div>
-                <a href="/games/dnd" class="nav-link">D&D</a>
+                <div class="nav-link text-light">Sort By: </div>
+                <div class="vr"></div>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">System</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/games/coyoteandcrow">Coyote and Crow</a>
+                      <a class="dropdown-item" href="/games/dnd">Dungeons & Dragons 5th Edition</a>
+                      <a class="dropdown-item" href="/games/fitd">Forged in the Dark</a>
+                      <a class="dropdown-item" href="/games/forgediniron">Forged in Iron</a>
+                      <a class="dropdown-item" href="/games/osr">Old School Renaissance</a>
+                      <a class="dropdown-item" href="/games/pbta">Powered by the Apocalypse</a>
+                      <a class="dropdown-item" href="/games/zweihander">Powered by Zweihander</a>
+                      <a class="dropdown-item" href="/games/stellaremnants">Stellar Remnants</a>
+                    </div>
+                </div>
                 <a class="btn btn-success" href="/auth/logout"" role="button">Sign Out</a>
                 <!-- <a href="/auth/logout" class="nav-link">Log Out</a> -->
             {% else %}

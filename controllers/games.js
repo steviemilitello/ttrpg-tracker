@@ -87,6 +87,24 @@ app.get('/dnd', (req, res) => {
 		})
 })
 
+// index  - sort by system: forged in the dark
+app.get('/fitd', (req, res) => {
+	// find the games
+	Game.find({ system: "Forged in the Dark" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
 // index  - sort by system: forged in iron
 app.get('/forgediniron', (req, res) => {
 	// find the games
@@ -105,11 +123,64 @@ app.get('/forgediniron', (req, res) => {
 		})
 })
 
+// index  - sort by system: old school renaissance
+app.get('/osr', (req, res) => {
+	// find the games
+	Game.find({ system: "Old School Renaissance" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// index  - sort by system: powered by the apocalypse
+app.get('/pbta', (req, res) => {
+	// find the games
+	Game.find({ system: "Powered by the Apocalypse" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
 
 // index  - sort by system: powered by zweihander
-app.get('/poweredbyzweihander', (req, res) => {
+app.get('/zweihander', (req, res) => {
 	// find the games
 	Game.find({ system: "Powered by Zweihander" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// index  - sort by system: stellar remnants
+app.get('/stellaremnants', (req, res) => {
+	// find the games
+	Game.find({ system: "Stellar Remnants" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username

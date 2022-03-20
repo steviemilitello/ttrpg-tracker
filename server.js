@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/error', (req, res) => {
-	const error = req.query.error || '<h1>You rolled a natural 1, you cannot find the page you are looking for<h1>'
+	const error = req.query.error || '<p></p><center><h1><p>You rolled a natural 1, </p>you cannot find the page you are looking for<h1></center>'
     const { username, loggedIn, userId } = req.session
 	res.render('error.liquid', { error, username, loggedIn, userId })
 })
