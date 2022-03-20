@@ -28,6 +28,14 @@ h1 {
     font-size: 30px;
 }
 
+.card-text {
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-weight: 300;
+    padding-left: 25px;
+    text-align: left;
+}
+
 .tab-content {
     font-family: 'Oswald', sans-serif; 
     font-weight: 300;
@@ -45,6 +53,17 @@ h1 {
 
 .comment-submit {
     text-align: right;
+}
+
+.align-self-start {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.align-self-end {
+    padding: 12px;
+    text-align: left;
 }
 
 .display-6 {
