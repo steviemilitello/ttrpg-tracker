@@ -1,22 +1,23 @@
-/////////////////////////////////////////////////
-////////////// DEPENDENCIES /////////////////////
-/////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////// DEPENDENCIES //////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const express = require('express')
 const Game = require('../models/games')
 
-/////////////////////////////////////////////////
-////////////// APP //////////////////////////////
-/////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////// APP ///////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const app = require("liquid-express-views")(express())
 
-/////////////////////////////////////////////////
-////////////// APP MIDDLEWARE ///////////////////
-/////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////// APP MIDDLEWARE ////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// create some middleware to protect these routes
-// Authorization middleware
+
+// < -------- Authorization middleware -> create some middleware to protect these routes -------------------->
+
 app.use((req, res, next) => {
 	// checking the logged in boolean of our session
 	if (req.session.loggedIn) {
@@ -28,9 +29,11 @@ app.use((req, res, next) => {
 	}
 })
 
-/////////////////////////////////////////////////
-////////////// ROUTES ///////////////////////////
-/////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////// ROUTES ////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// <---------- index route -> all games --------------------------------------------------------------------->
 
 // index all games
 app.get('/', (req, res) => {
@@ -51,7 +54,10 @@ app.get('/', (req, res) => {
 		})
 })
 
+// <---------- index routes -> sort by system --------------------------------------------------------------->
+
 // index  - sort by system: coyote & crow
+
 app.get('/coyoteandcrow', (req, res) => {
 	// find the games
 	Game.find({ system: "Coyote & Crow" })
@@ -70,6 +76,7 @@ app.get('/coyoteandcrow', (req, res) => {
 })
 
 // index  - sort by system: dungeons and dragons 5th edition
+
 app.get('/dnd', (req, res) => {
 	// find the games
 	Game.find({ system: "Dungeons & Dragons 5th Edition" })
@@ -88,6 +95,7 @@ app.get('/dnd', (req, res) => {
 })
 
 // index  - sort by system: forged in the dark
+
 app.get('/fitd', (req, res) => {
 	// find the games
 	Game.find({ system: "Forged in the Dark" })
@@ -106,6 +114,7 @@ app.get('/fitd', (req, res) => {
 })
 
 // index  - sort by system: forged in iron
+
 app.get('/forgediniron', (req, res) => {
 	// find the games
 	Game.find({ system: "Forged in Iron" })
@@ -124,6 +133,7 @@ app.get('/forgediniron', (req, res) => {
 })
 
 // index  - sort by system: old school renaissance
+
 app.get('/osr', (req, res) => {
 	// find the games
 	Game.find({ system: "Old School Renaissance" })
@@ -142,6 +152,7 @@ app.get('/osr', (req, res) => {
 })
 
 // index  - sort by system: powered by the apocalypse
+
 app.get('/pbta', (req, res) => {
 	// find the games
 	Game.find({ system: "Powered by the Apocalypse" })
@@ -160,6 +171,7 @@ app.get('/pbta', (req, res) => {
 })
 
 // index  - sort by system: powered by zweihander
+
 app.get('/zweihander', (req, res) => {
 	// find the games
 	Game.find({ system: "Powered by Zweihander" })
@@ -178,6 +190,7 @@ app.get('/zweihander', (req, res) => {
 })
 
 // index  - sort by system: stellar remnants
+
 app.get('/stellaremnants', (req, res) => {
 	// find the games
 	Game.find({ system: "Stellar Remnants" })
@@ -195,7 +208,223 @@ app.get('/stellaremnants', (req, res) => {
 		})
 })
 
+// <---------- index routes -> sort by genre ----------------------------------------------------------------->
+
+// index  - sort by genre: cyberpunk 
+
+app.get('/cyberpunk', (req, res) => {
+	// find the games
+	Game.find({ genres: "Cyberpunk" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// index  - sort by genre: fantasy 
+
+app.get('/fantasy', (req, res) => {
+	// find the games
+	Game.find({ genres: "Fantasy" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// index  - sort by genre: dark fantasy 
+
+app.get('/darkfantasy', (req, res) => {
+	// find the games
+	Game.find({ genres: "Dark Fantasy" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// index  - sort by genre: sci-fi 
+
+app.get('/scifi', (req, res) => {
+	// find the games
+	Game.find({ genres: "Sci-Fi" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// index  - sort by genre: science fantasy
+
+app.get('/sciencefantasy', (req, res) => {
+	// find the games
+	Game.find({ genres: "Science Fantasy" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// index  - sort by genre: steampunk 
+
+app.get('/steampunk', (req, res) => {
+	// find the games
+	Game.find({ genres: "Steampunk" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// index  - sort by genre: urban fantasy
+
+app.get('/urbanfantasy', (req, res) => {
+	// find the games
+	Game.find({ genres: "Urban Fantasy" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// index  - sort by genre: genre agnostic
+
+app.get('/genreagnostic', (req, res) => {
+	// find the games
+	Game.find({ genres: "Genre Agnostic" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// <---------- index routes -> sort by game type ------------------------------------------------------------->
+
+// index  - sort by game type: GM
+
+app.get('/gm', (req, res) => {
+	// find the games
+	Game.find({ gametypes: "GM" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// index  - sort by game type: GM-Less
+
+app.get('/gmless', (req, res) => {
+	// find the games
+	Game.find({ gametypes: "GM-less" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// index  - sort by game type: Solo
+
+app.get('/solo', (req, res) => {
+	// find the games
+	Game.find({ gametypes: "Solo" })
+		// render template after they are found
+		.then((games) => {
+			const username = req.session.username
+			const loggedIn = req.session.loggedIn
+			console.log(games)
+			res.render('games/index', { games, username, loggedIn })
+		})
+		// show an error if there is one
+		.catch((error) => {
+			console.log(error)
+			res.json({ error })
+		})
+})
+
+// <---------- index route -> users games -------------------------------------------------------------------->
+
 // index that shows only the user's games
+
 app.get('/mine', (req, res) => {
 	// find the games
 	Game.find({ owner: req.session.userId })
@@ -214,14 +443,20 @@ app.get('/mine', (req, res) => {
 		})
 })
 
+// <---------- new route ------------------------------------------------------------------------------------>
+
 // new route -> GET route that renders our page with the form
+
 app.get('/new', (req, res) => {
 	const username = req.session.username
 	const loggedIn = req.session.loggedIn
 	res.render('games/new', { username, loggedIn })
 })
 
+// <---------- create routes --------------------------------------------------------------------------------->
+
 // create -> POST route that actually calls the db and makes a new document for add new game page
+
 app.post('/', (req, res) => {
 	req.body.owner = req.session.userId
 	Game.create(req.body)
@@ -236,6 +471,7 @@ app.post('/', (req, res) => {
 })
 
 // create -> POST route that actually calls the db and makes a new document to add to favorites/game collection
+
 app.post('/newfave', (req, res) => {
 	console.log("POST ROUTE HIT")
 	// and since we've stored the id of the user in the session object
@@ -253,7 +489,10 @@ app.post('/newfave', (req, res) => {
 		})
 })
 
+// <---------- edit route ------------------------------------------------------------------------------------>
+
 // edit route -> GET that takes us to the edit form view
+
 app.get('/:id/edit', (req, res) => {
 	// we need to get the id
 	const gameId = req.params.id
@@ -273,7 +512,10 @@ app.get('/:id/edit', (req, res) => {
 		})
 })
 
+// <---------- update route ---------------------------------------------------------------------------------->
+
 // update route -> sends a put request to our database
+
 app.put('/:id', (req, res) => {
 	// get the id
 	const gameId = req.params.id
@@ -288,6 +530,8 @@ app.put('/:id', (req, res) => {
 		// if an error, display that
 		.catch((error) => res.json(error))
 })
+
+// <---------- show route ------------------------------------------------------------------------------------>
 
 // show route
 
@@ -311,6 +555,8 @@ app.get('/:id', (req, res) => {
 			res.json({ err })
 		})
 })
+
+// <---------- delete route ---------------------------------------------------------------------------------->
 
 // delete route
 
