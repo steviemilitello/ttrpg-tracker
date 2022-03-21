@@ -4,9 +4,8 @@
     <div class="row">
         {% for game in games %}
         <div class="card" style="width: 17rem;">
-            <!-- <h5 class="card-header">{{ game.name }}</h> -->
-            <div class="card-body d-flex flex-column">
-                <p><img class="card-img-top" src="{{ game.img }}"></p>
+            <div class="card-body d-flex flex-column justify-content-end">
+                <p><img class="card-img" src="{{ game.img }}"></p>
                 <form action="/games/newfave" method="POST">
                     <a href="/games/{{ game._id }}" class="btn btn-secondary">View</a>
                     <input hidden value="{{game.img}}" name="img">

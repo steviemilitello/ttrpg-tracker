@@ -4,8 +4,7 @@
     <form action="/games" method="POST">
         <fieldset>
             <legend class="game-header">Add New Game</legend>
-            <p><label class="form-label">Image: </label></p>
-            <p>
+            <p><label class="form-label">Image: </label>
             <input 
                 type="text" 
                 name="img" 
@@ -43,18 +42,25 @@
                 placeholder="enter creators (separate with a comma)" 
                 class="form-control"
             ></p>
-            <p><label class="form-label">Publisher:</label>
+            <p><label class="form-label">Publishers:</label>
                 <input 
                     type="text" 
-                    name="publisher" 
-                    placeholder="enter publisher" 
+                    name="publishers" 
+                    placeholder="enter publishers (separate with a comma)" 
                     class="form-control"
                 ></p>
-            <p><label class="form-label">Types:</label>
+            <p><label class="form-label">Game Types:</label>
             <input 
                 type="text" 
-                name="types" 
-                placeholder="enter types such as GM, GM-Less, Solo, Module, Supplement etc. (separate with a comma)" 
+                name="gametypes" 
+                placeholder="enter game types such as GM, GM-Less, Solo etc. (separate with a comma)" 
+                class="form-control"
+            ></p>
+            <p><label class="form-label">Book Types:</label>
+            <input 
+                type="text" 
+                name="booktypes" 
+                placeholder="enter book types such as Core Rule Book, Module, Supplement etc. (separate with a comma)" 
                 class="form-control"
             ></p>
             <p><label class="form-label">Players:</label>

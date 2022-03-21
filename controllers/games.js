@@ -16,7 +16,7 @@ const app = require("liquid-express-views")(express())
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-// < -------- Authorization middleware -> create some middleware to protect these routes -------------------->
+// < -------- authorization middleware -> create some middleware to protect these routes -------------------->
 
 app.use((req, res, next) => {
 	// checking the logged in boolean of our session
@@ -433,7 +433,6 @@ app.get('/mine', (req, res) => {
 			console.log(games)
 			const username = req.session.username
 			const loggedIn = req.session.loggedIn
-
 			res.render('games/index', { games, username, loggedIn })
 		})
 		// show an error if there is one
@@ -462,7 +461,7 @@ app.post('/', (req, res) => {
 	Game.create(req.body)
 		.then((game) => {
 			console.log('this was returned from create', game)
-			res.redirect('/games')
+			res.redirect('/newfave')
 		})
 		.catch((err) => {
 			console.log(err)

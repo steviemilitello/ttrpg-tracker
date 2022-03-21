@@ -36,6 +36,19 @@ h1 {
     text-align: left;
 }
 
+.card-img {
+    width: 100%;
+    
+}
+
+.card-body {
+    text-align: center;
+}
+
+.edit-page-buttons {
+    text-align: center;
+}
+
 .tab-content {
     font-family: 'Oswald', sans-serif; 
     font-weight: 300;
@@ -86,18 +99,6 @@ h1 {
 
 .form-control-file {
     color: white;
-}
-
-.card-img-top {
-    width: 100%;
-}
-
-.card-body {
-    text-align: center;
-}
-
-.edit-page-buttons {
-    text-align: center;
 }
 
 .btn-close {
