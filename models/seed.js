@@ -25,6 +25,7 @@ db.on('open', () => {
         publishers: ["Coyote & Crow"],
         gametypes: ["GM"],
         booktypes: ["Core Rule Book"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -37,6 +38,7 @@ db.on('open', () => {
         publishers: ["Wizards of the Coast"],
         gametypes: ["GM",],
         booktypes: ["Core Rule Book"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -49,6 +51,7 @@ db.on('open', () => {
         publishers: ["Wizards of the Coast"],
         gametypes: ["GM",],
         booktypes: ["Core Rule Book"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -61,6 +64,7 @@ db.on('open', () => {
         publishers: ["Wizards of the Coast"],
         gametypes: ["GM",],
         booktypes: ["Core Rule Book"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -73,6 +77,7 @@ db.on('open', () => {
         publishers: ["Wizards of the Coast"],
         gametypes: ["GM",],
         booktypes: ["Setting Guide"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -85,6 +90,7 @@ db.on('open', () => {
         publishers: ["Critical Role, Wizards of the Coast"],
         gametypes: ["GM",],
         booktypes: ["Setting Guide"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -97,6 +103,7 @@ db.on('open', () => {
         publishers: ["Wizards of the Coast"],
         gametypes: ["GM",],
         booktypes: ["Module"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -109,6 +116,7 @@ db.on('open', () => {
         publishers: ["Wizards of the Coast"],
         gametypes: ["GM",],
         booktypes: ["Setting Guide"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -121,6 +129,7 @@ db.on('open', () => {
         publishers: ["Wizards of the Coast"],
         gametypes: ["GM",],
         booktypes: ["Module", "Setting Guide"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -133,6 +142,7 @@ db.on('open', () => {
         publishers: ["Critical Role", "Darrington Press"],
         gametypes: ["GM"],
         booktypes: ["Setting Guide"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -145,6 +155,7 @@ db.on('open', () => {
         publishers: ["Critical Role", "Wizards of the Coast"],
         gametypes: ["GM"],
         booktypes: ["Module"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -157,6 +168,7 @@ db.on('open', () => {
         publishers: ["Evil Hat Productions, One Seven Design"],
         gametypes: ["GM"],
         booktypes: ["Core Rule Book"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -169,6 +181,7 @@ db.on('open', () => {
         publishers: ["Shawn Tomkin"],
         gametypes: ["GM", "GM-less", "Solo"],
         booktypes: ["Core Rule Book"],
+        seeddata: true,
         players: 1,
         },
         {
@@ -181,6 +194,7 @@ db.on('open', () => {
         publishers: ["Shawn Tomkin"],
         gametypes: ["GM", "GM-less", "Solo"],
         booktypes: ["Supplement"],
+        seeddata: true,
         players: 1,
         },
         {
@@ -193,6 +207,7 @@ db.on('open', () => {
         publishers: ["Shawn Tomkin"],
         gametypes: ["GM", "GM-less", "Solo"],
         booktypes: ["Supplement"],
+        seeddata: true,
         players: 1,
         },
         {
@@ -205,6 +220,7 @@ db.on('open', () => {
         publishers: ["Absolute Tabletop", "Shawn Tomkin"],
         gametypes: ["GM", "GM-less", "Solo"],
         booktypes: ["Core Rule Book"],
+        seeddata: true,
         players: 1,
         },
         { 
@@ -217,6 +233,7 @@ db.on('open', () => {
         publishers: ["Sine Nomine Publishing"],
         gametypes: ["GM"],
         booktypes: ["Core Rule Book"],
+        seeddata: true,
         players: 4,
         },
         { 
@@ -229,6 +246,7 @@ db.on('open', () => {
         publishers: ["Evil Hat Productions"],
         gametypes: ["GM"],
         booktypes: ["Core Rule Book"],
+        seeddata: true,
         players: 3,
         },
         {
@@ -241,6 +259,7 @@ db.on('open', () => {
         publishers: ["Evil Hat Productions"],
         gametypes: ["GM"],
         booktypes: ["Supplement"],
+        seeddata: true,
         players: 2,
         },
         {
@@ -253,6 +272,7 @@ db.on('open', () => {
         publishers: ["Evil Hat Productions", "Gay Spaceship Games"],
         gametypes: ["GM"],
         booktypes: ["Core Rule Book"],
+        seeddata: true,
         players: 3,
         },
         {
@@ -265,6 +285,7 @@ db.on('open', () => {
         publishers: ["World Champ Game Co."],
         gametypes: ["GM"],
         booktypes: ["Core Rule Book"],
+        seeddata: true,
         players: 2,
         },
 		{
@@ -277,6 +298,7 @@ db.on('open', () => {
         publishers: ["Andrew McMeel Publishing", "Grim & Perilous"],
         gametypes: ["GM"],
         booktypes: ["Core Rule Book"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -289,6 +311,7 @@ db.on('open', () => {
         publishers: ["Andrew McMeel Publishing", "Grim & Perilous"],
         gametypes: ["GM"],
         booktypes: ["Supplement"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -301,6 +324,7 @@ db.on('open', () => {
         publishers: ["Andrew McMeel Publishing", "Grim & Perilous"],
         gametypes: ["GM"],
         booktypes: ["Supplement"],
+        seeddata: true,
         players: 4,
         },
         {
@@ -313,6 +337,7 @@ db.on('open', () => {
         publishers: ["Andrew McMeel Publishing", "Grim & Perilous"],
         gametypes: ["GM"],
         booktypes: ["Supplement"],
+        seeddata: true,
         players: 4,
         },
 	]

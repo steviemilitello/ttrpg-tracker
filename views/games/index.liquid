@@ -1,27 +1,30 @@
 {% layout 'layout.liquid'%}
 {% block content %}
     <p><h2 class="display-6">Games</h2></p>
-    <div class="row">
-        {% for game in games %}
-        <div class="card" style="width: 17rem;">
-            <div class="card-body d-flex flex-column justify-content-end">
-                <p><img class="card-img" src="{{ game.img }}"></p>
-                <form action="/games/newfave" method="POST">
-                    <a href="/games/{{ game._id }}" class="btn btn-secondary">View</a>
-                    <input hidden value="{{game.img}}" name="img">
-                    <input hidden value="{{game.name}}" name="name">
-                    <input hidden value="{{game.description}}" name="description">
-                    <input hidden value="{{game.system}}" name="system">
-                    <input hidden value="{{game.genres}}" name="genres">
-                    <input hidden value="{{ game.creators | join: ", " }}" name="creators">
-                    <input hidden value="{{game.publishers | join: ", " }}" name="publishers">
-                    <input hidden value="{{game.gametypes | join: ", " }}" name="gametypes">
-                    <input hidden value="{{game.booktypes | join: ", " }}" name="booktypes">
-                    <input hidden value="{{game.players}}" name="players">
-                    <input type="submit" value="+" class="btn btn-secondary">
-                </form>
-            </div>
+        <div class="row">
+                {% for game in games %}
+                    <div class="card" style="width: 17rem;">
+                        <div class="card-body d-flex flex-column justify-content-end">
+                            <p><img class="card-img" src="{{ game.img }}"></p>
+                            <form action="/games/newfave" method="POST">
+                                <a href="/games/{{ game._id }}" class="btn btn-secondary">View</a>
+                                <input hidden value="{{game.img}}" name="img">
+                                <input hidden value="{{game.name}}" name="name">
+                                <input hidden value="{{game.description}}" name="description">
+                                <input hidden value="{{game.system}}" name="system">
+                                <input hidden value="{{game.genres}}" name="genres">
+                                <input hidden value="{{ game.creators | join: ", " }}" name="creators">
+                                <input hidden value="{{game.publishers | join: ", " }}" name="publishers">
+                                <input hidden value="{{game.gametypes | join: ", " }}" name="gametypes">
+                                <input hidden value="{{game.booktypes | join: ", " }}" name="booktypes">
+                                <input hidden value="{{game.players}}" name="players">
+                                <input type="submit" value="+" class="btn btn-secondary">
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
         </div>
-        {% endfor %}
-    </div>
 {% endblock %}
+
+
+                

@@ -38,13 +38,12 @@ app.use((req, res, next) => {
 // index all games
 app.get('/', (req, res) => {
 	// find the games
-	Game.find({})
-		Game.aggregate( [ { $sort : { system : 1 } } ] )
+	Game.find({ seeddata: true })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
 			const loggedIn = req.session.loggedIn
-			// console.log(games)
+			console.log(games)
 			res.render('games/index', { games, username, loggedIn })
 		})
 		// show an error if there is one
@@ -427,13 +426,13 @@ app.get('/solo', (req, res) => {
 
 app.get('/mine', (req, res) => {
 	// find the games
-	Game.find({ owner: req.session.userId })
+	Game.find({ owner: req.session.userId }).sort ({ system: 1 })
 		// then render a template AFTER they're found
 		.then((games) => {
 			console.log(games)
 			const username = req.session.username
 			const loggedIn = req.session.loggedIn
-			res.render('games/index', { games, username, loggedIn })
+			res.render('games/mine', { games, username, loggedIn })
 		})
 		// show an error if there is one
 		.catch((error) => {
@@ -452,16 +451,17 @@ app.get('/new', (req, res) => {
 	res.render('games/new', { username, loggedIn })
 })
 
-// <---------- create routes --------------------------------------------------------------------------------->
+// <---------- create routes ---------------------------------------------------------------------------------->
 
 // create -> POST route that actually calls the db and makes a new document for add new game page
+// adds to favorite
 
 app.post('/', (req, res) => {
 	req.body.owner = req.session.userId
 	Game.create(req.body)
 		.then((game) => {
 			console.log('this was returned from create', game)
-			res.redirect('/newfave')
+			res.redirect('/games/mine')
 		})
 		.catch((err) => {
 			console.log(err)

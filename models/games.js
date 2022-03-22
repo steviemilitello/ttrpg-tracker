@@ -32,6 +32,7 @@ const gamesSchema = new Schema(
         publishers: [ String ],
 		gametypes: [ String ],
 		booktypes: [ String ],
+		seeddata: { type: Boolean, default: false },
         players: { type: Number },
 		owner: {
 			type: Schema.Types.ObjectID,
