@@ -1,6 +1,72 @@
 # PROJECT 2 #
 
-## TABLETOP RPG BOOK TRACKER ##
+## TTTRPG Tracker ##
+
+- An app for tracking your tabletop rpg book collection 
+
+## Installation 
+
+1. Fork and clone this repo 
+2. install the necessary dependencies - `npm install @popperjs/core bcryptjs connect-mongo dotenv express express-session liquid-express-views method-override mongoose morgan`
+3. run `npm seed` to seed the database from seed.js 
+4. run `npm start` and go to `localhost:3000` in your browser to view
+
+## Routes
+
+**Comment**
+
+| Verb   | URI Pattern                         | Controller#Action              |
+|--------|-------------------------------------|--------------------------------|
+| POST   | `/games/:gameId`                    | `games#gameId`                 |
+| DELETE | `/games//delete/:gameId/:commId`    | `games#delete#gameId#commId`   |
+
+**Games** 
+
+| Verb   | URI Pattern                         | Controller#Action              |
+|--------|-------------------------------------|--------------------------------|
+| GET    | `/`                                 | `games#`                       |
+| GET    | `/coyoteandcrow`                    | `games#/oyoteandcrow`          |
+| GET    | `/dnd`                              | `games#dnd`                    |
+| GET    | `/fitd`                             | `games#fitd`                   |
+| GET    | `/forgediniron`                     | `games#forgediniron`           |
+| GET    | `/osr`                              | `games#osr`                    |
+| GET    | `/pbta`                             | `games#pbta`                   |
+| GET    | `/stellarremnants`                  | `games#stellarremnants`        |
+| GET    | `/cyberpunk`                        | `games#cyberpunk`              |
+| GET    | `/fantasy`                          | `games#fantasy`                |
+| GET    | `/darkfantasy`                      | `games#darkfantasy`            |
+| GET    | `/scifi`                            | `games#scifi`                  |
+| GET    | `/sciencefantasy`                   | `games#sciencefantasy`         |
+| GET    | `/steampunk`                        | `games#steampunk`              |
+| GET    | `/urbanfantasy`                     | `games#urbanfantasy`           |
+| GET    | `/genreagnostic`                    | `games#genreagnostic`          |
+| GET    | `/gm`                               | `games#gm`                     |
+| GET    | `/gmless`                           | `games#gmless`                 |
+| GET    | `/solo`                             | `games#solo`                   |
+| GET    | `/mine`                             | `games#mine`                   |
+| GET    | `/new`                              | `games#new`                    |
+| POST   | `/`                                 | `games#`                       |
+| POST   | `/newfave`                          | `games#newfave`                |
+| GET    | `/:id/edit`                         | `games#:id#edit`               |
+| PUT    | `/:id/`                             | `games#:id#`                   |
+| GET    | `/:id`                              | `games#:id#`                   |
+| DELETE | `/:id`                              | `games#:id#`                   |
+
+**Home**
+
+| Verb   | URI Pattern                         | Controller#Action              |
+|--------|-------------------------------------|--------------------------------|
+| GET    | `/`                                 | `/`                            |
+
+**User**
+
+| Verb   | URI Pattern                         | Controller#Action              |
+|--------|-------------------------------------|--------------------------------|
+| POST   | `/auth/signup`                      | `users#signup`                 |
+| POST   | `/auth/login`                       | `users#login`                  |
+| DELETE | `/auth/logout/`                     | `users#logout`                 |
+
+## Pitch
 
 **Example Image 1**
 

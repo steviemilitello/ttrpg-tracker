@@ -169,11 +169,11 @@ app.get('/pbta', (req, res) => {
 		})
 })
 
-// index  - sort by system: powered by zweihander
+// index  - sort by system: stellar remnants
 
-app.get('/zweihander', (req, res) => {
+app.get('/stellaremnants', (req, res) => {
 	// find the games
-	Game.find({ system: "Powered by Zweihander" })
+	Game.find({ system: "Stellar Remnants" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -188,11 +188,11 @@ app.get('/zweihander', (req, res) => {
 		})
 })
 
-// index  - sort by system: stellar remnants
+// index  - sort by system: powered by zweihander
 
-app.get('/stellaremnants', (req, res) => {
+app.get('/zweihander', (req, res) => {
 	// find the games
-	Game.find({ system: "Stellar Remnants" })
+	Game.find({ system: "Powered by Zweihander" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
