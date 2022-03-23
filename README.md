@@ -83,7 +83,7 @@
 ### REQUIREMENTS
 
 - Models: User, Game Library, Comments
-- API: Open Library API - https://openlibrary.org/dev/docs/api/books
+- Seeded Data
 - RESTful routes: utilize routes for examples of user story below such as showing all the books, showing the users library, adding and deleting books to their library etc. 
 - ODM / MongoDB - utilize ODM to create a database of game information
 
@@ -108,7 +108,7 @@
 
 ### TECHNOLOGIES 
 
-- HTML, CSS, CSS Bootstrap, JavaScript, Liquid JS, Express, MongoDB, Open Library API
+- HTML, CSS, CSS Bootstrap, JavaScript, Liquid JS, Express, MongoDB
 
 
 
