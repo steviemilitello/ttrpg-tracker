@@ -14,7 +14,7 @@
 
 <h1>:books: Description</h1>
 
-<p>TTRPG Tracker is an app to keep track of your tabletop RPG book collection. As a user you can view books, add books to your collection, add new books, and add comments to a book's page.</p>
+<p>TTRPG Tracker is an app to keep track of your tabletop RPG book collection. As a user you can view books, add books to your collection, remove books from your collection, add new books, sort the books, and add comments to a book's page.</p>
 
 <h2> :atom_symbol: Getting Started </h2>
 
@@ -29,24 +29,24 @@
     <li>run <code>npm start</code> and go to <code>localhost:3000</code> in your browser to view</li>
 </ul>
 </details>
-
-<details open>
+<p></p>
+<details>
 <summary>Dependencies</summary>
 <p></p>
 <ul>
-    <li>Popper JS</li>
-    <li>Bcrypt</li>
-    <li>Connect-Mongo</li>
-    <li>Dotenv</li>
-    <li>Express</li>
-    <li>Express-Session</li>
-    <li>Liquid-Express-Views</li>
-    <li>Method-Override</li>
-    <li>Mongoose</li>
-    <li>Morgan</li>
+    <li><a href="https://www.npmjs.com/package/@popperjs/core">@Popper JS/Core</a> :information_source: <code>npm i @popperjs/core</code></li>
+    <li><a href="https://www.npmjs.com/package/bcrypt">Bcrypt</a></li>
+    <li><a href="https://www.npmjs.com/package/connect-mongo">Connect-Mongo</a></li>
+    <li><a href="https://www.npmjs.com/package/dotenv">Dotenv</a></li>
+    <li><a href="https://www.npmjs.com/package/express">Express</a></li>
+    <li><a href="https://www.npmjs.com/package/express-session">Express-Session</a></li>
+    <li><a href="https://www.npmjs.com/package/liquid-express-views">Liquid-Express-Views</a></li>
+    <li><a href="https://www.npmjs.com/package/method-override">Method-Override</a></li>
+    <li><a href="https://www.npmjs.com/package/mongoose">Mongoose</a></li>
+    <li><a href="https://www.npmjs.com/package/morgan">Morgan</a></li>
 </ul>
 </details>
-
+<p></p>
 <h1>:arrow_right: Routes</h1>
 
 <details>
@@ -89,7 +89,7 @@
 | POST   | `/`                                 | `games#`                       |
 | POST   | `/newfave`                          | `games#newfave`                |
 | GET    | `/:id/edit`                         | `games#:id#edit`               |
-| PUT    | `/:id/`                             | `games#:id#`                   |
+| PUT    | `/:id`                              | `games#:id#`                   |
 | GET    | `/:id`                              | `games#:id#`                   |
 | DELETE | `/:id`                              | `games#:id#`                   |
 
@@ -111,14 +111,14 @@
 |--------|-------------------------------------|--------------------------------|
 | POST   | `/auth/signup`                      | `users#signup`                 |
 | POST   | `/auth/login`                       | `users#login`                  |
-| DELETE | `/auth/logout/`                     | `users#logout`                 |
+| DELETE | `/auth/logout`                      | `users#logout`                 |
 
 </details>
-
+<p></p>
 <h1>:framed_picture: Screenshots</h1>
 
 <details>
-<summary> :art: ERD</summary>
+<summary> :bar_chart: ERD</summary>
 
 | Description | Screenshot |
 |------------ | ------------|
