@@ -1,5 +1,5 @@
 <div align="center">
-   <h1>:game_die: TTRPG Tracker :game_die:</h1>
+   <h1>:game_die: TTRPG TRACKER :game_die:</h1>
    <h3><a href="https://ttrpgtracker.herokuapp.com/">https://ttrpgtracker.herokuapp.com/</a></h3>                           
    <a href="http://steviecodes.com" target="_blank">
       <img src="https://img.shields.io/badge/-Portfolio_-darkgreen?style=for-the-badge&logo=medium"/>
