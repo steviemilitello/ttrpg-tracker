@@ -117,7 +117,7 @@
    <li>Click the view button on the game you wish to add a comment to</li>
    <li>Once on the game page, type your comment in the Comment form in the lower right of the page</li>
    <li>Click the Add Comment button to add your comment to the page</li>
-   <li>Your comment and user's comments will appear below the form on the page</li>
+   <li>Your comment and other user's comments will appear below the form on the page</li>
 </ol>
 </details>
 <p></p>
