@@ -24,7 +24,7 @@
 <p></p>
 <ul>
     <li>Fork and Clone this Repo</li>
-    <li>Install the necessary dependencies: <code>npm install @popperjs/core bcryptjs connect-mongo dotenv express express-session liquid-express-views method-override mongoose morgan</code></li>
+    <li>Install the necessary dependencies by copying the code below (or see dependencies to install individually): <br /><code>npm install @popperjs/core bcryptjs connect-mongo dotenv express express-session liquid-express-views method-override mongoose morgan</code></li>
     <li>run <code>npm seed</code> to seed the database from <code>seed.js</code></li>
     <li>run <code>npm start</code> and go to <code>localhost:3000</code> in your browser to view</li>
 </ul>
@@ -34,16 +34,16 @@
 <summary>Dependencies</summary>
 <p></p>
 <ul>
-    <li><a href="https://www.npmjs.com/package/@popperjs/core">@Popper JS/Core</a> :information_source: <code>npm i @popperjs/core</code></li>
-    <li><a href="https://www.npmjs.com/package/bcrypt">Bcrypt</a></li>
-    <li><a href="https://www.npmjs.com/package/connect-mongo">Connect-Mongo</a></li>
-    <li><a href="https://www.npmjs.com/package/dotenv">Dotenv</a></li>
-    <li><a href="https://www.npmjs.com/package/express">Express</a></li>
-    <li><a href="https://www.npmjs.com/package/express-session">Express-Session</a></li>
-    <li><a href="https://www.npmjs.com/package/liquid-express-views">Liquid-Express-Views</a></li>
-    <li><a href="https://www.npmjs.com/package/method-override">Method-Override</a></li>
-    <li><a href="https://www.npmjs.com/package/mongoose">Mongoose</a></li>
-    <li><a href="https://www.npmjs.com/package/morgan">Morgan</a></li>
+    <li><a href="https://www.npmjs.com/package/@popperjs/core">@Popper JS/Core</a> <code>npm i @popperjs/core</code></li>
+    <li><a href="https://www.npmjs.com/package/bcrypt">Bcrypt</a> <code>npm i bcrypt</code></li>
+    <li><a href="https://www.npmjs.com/package/connect-mongo">Connect-Mongo</a> <code>npm i connect-mongo</code></li>
+    <li><a href="https://www.npmjs.com/package/dotenv">Dotenv</a> <code>npm i dotenv</code></li>
+    <li><a href="https://www.npmjs.com/package/express">Express</a> <code>npm i express</code></li>
+    <li><a href="https://www.npmjs.com/package/express-session">Express-Session</a> <code>npm i express-session</code></li>
+    <li><a href="https://www.npmjs.com/package/liquid-express-views">Liquid-Express-Views</a> <code>npm i liquid-express-views</code></li>
+    <li><a href="https://www.npmjs.com/package/method-override">Method-Override</a> <code>npm i method-override</code></li>
+    <li><a href="https://www.npmjs.com/package/mongoose">Mongoose</a> <code>npm i mongoose</code></li>
+    <li><a href="https://www.npmjs.com/package/morgan">Morgan</a> <code>npm i morgan</code></li>
 </ul>
 </details>
 <p></p>
