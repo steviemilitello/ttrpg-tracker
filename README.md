@@ -135,6 +135,18 @@
 | <h3 align="center">Example Page 2</h3> | <img src="public/images/example2.png" width="700"> |
 
 </details>
+
+<details>
+<summary> :gear: Functionality</summary>
+
+| Description | Screenshot |
+|------------ | ------------|
+| <h3 align="center">Index Page</h3> | <img src="https://i.imgur.com/4nj1cNP.png" width="700"/> |
+| <h3 align="center">Show Page</h3> | <img src="https://i.imgur.com/6JlnZ6C.png" width="700"> |
+</details>
+<p></p>
+
+</details>
 <p></p>
 <h1>:bust_in_silhouette: User Story</h1>
 
