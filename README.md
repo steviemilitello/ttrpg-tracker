@@ -24,7 +24,7 @@
 <p></p>
 <ul>
     <li>Fork and Clone this Repo</li>
-    <li>Install the necessary dependencies by copying the code below (or see dependencies to install individually): <br /><code>npm install @popperjs/core bcryptjs connect-mongo dotenv express express-session liquid-express-views method-override mongoose morgan</code></li>
+    <li>Install the necessary dependencies by copying the code below (or see dependencies to install individually): <br /><code>npm i @popperjs/core bcryptjs connect-mongo dotenv express express-session liquid-express-views method-override mongoose morgan</code></li>
     <li>run <code>npm seed</code> to seed the database from <code>seed.js</code></li>
     <li>run <code>npm start</code> and go to <code>localhost:3000</code> in your browser to view</li>
 </ul>
