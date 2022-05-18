@@ -118,7 +118,7 @@
 <h1>:framed_picture: Screenshots</h1>
 
 <details>
-<summary> :bar_chart: ERD</summary>
+<summary> :bar_chart: ERD</summary><br />
 
 | Description | Screenshot |
 |------------ | ------------|
@@ -127,7 +127,7 @@
 </details>
 
 <details>
-<summary> :art: Wireframes</summary>
+<summary> :art: Wireframes</summary><br />
 
 | Description | Screenshot |
 |------------ | ------------|
@@ -136,8 +136,8 @@
 
 </details>
 
-<details>
-<summary> :gear: Functionality</summary>
+<details open>
+<summary> :gear: Functionality</summary><br />
 
 | Description | Screenshot |
 |------------ | ------------|
