@@ -54,7 +54,7 @@
 <summary>How to Add a Game to My Games</summary>
 <p></p>
 <ol>
-   <li>Click the + button on the All Games Page</li>
+   <li>Click the + button on the All Games Page on the game you wish to add</li>
    <li>Go to My Games and you will see the game in your personal collection</li>
 </ol>
 </details>
@@ -77,7 +77,7 @@
 <summary>How to Edit a Game</summary>
 <p></p>
 <ol>
-   <li>Go to My Games and click the View button</li>
+   <li>Go to My Games and click the View button on the game you wish to edit</li>
    <li>Click the Edit Button in the bottom left corner under the image</li>
    <li>Fill in the fields on the Edit Page</li>
    <li>Click the Edit Game Button at the bottom of the page</li>
@@ -90,7 +90,7 @@
 <summary>How to Delete a Game</summary>
 <p></p>
 <ol>
-   <li>Go to My Games and click the View button</li>
+   <li>Go to My Games and click the View button on the game you wish to delete</li>
    <li>Click the Delete Button in the bottom left corner under the image</li>
    <li>The game will be deleted from your My Games Page</li>
    <li>If you added the game via Add New Game, the version only exists on your My Games page and will be deleted</li>
@@ -106,6 +106,30 @@
 <ol>
    <li>In the Navbar, click System, Genres or Game Type to sort by the categories</li>
    <li>A dropdown will appear, allowing you to select sub-categories, which will bring you to the sorted page once clicked</li>
+</ol>
+</details>
+<p></p>
+
+<details>
+<summary>How to Add a Comment</summary>
+<p></p>
+<ol>
+   <li>Click the view button on the game you wish to add a comment to</li>
+   <li>Once on the game page, type your comment in the Comment form in the lower right of the page</li>
+   <li>Click the Add Comment button to add your comment to the page</li>
+   <li>Your comment and user's comments will appear below the form on the page</li>
+</ol>
+</details>
+<p></p>
+
+<details>
+<summary>How to Delete a Comment</summary>
+<p></p>
+<ol>
+   <li>Click the view button on the game where you wish to delete a comment</li>
+   <li>If you added the comment, you will see an X in the upper right of the comment</li>
+   <li>Click the X to delete the comment</li>
+   <li>Your comment will be deleted</li>
 </ol>
 </details>
 <p></p>
