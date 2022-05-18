@@ -171,5 +171,11 @@
 ![LiquidJS](https://img.shields.io/badge/-Liquidjs-blue?style=for-the-badge&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
+<h1>:fast_forward: Next Steps</h1>
+
+<input type="checkbox"> Add more books to database<br />
+<input type="checkbox"> Add ability for users to add games for all users to see, not just their collection <br />
+<input type="checkbox"> Refactor with separate API and Client <br />
+
 
 
