@@ -173,9 +173,11 @@
 
 <h1>:fast_forward: Next Steps</h1>
 
-<input type="checkbox"></input> Add more books to database<br />
-<input type="checkbox"></input> Add ability for users to add games for all users to see, not just their collection <br />
-<input type="checkbox"></input> Refactor with separate API and Client <br />
+<ul>
+    <li>Add more books to database</li>
+    <li>Add ability for users to add games for all users to see, not just their collection</li>
+    <li>Refactor with separate API and Client</li>
+ </ul>
 
 
 
