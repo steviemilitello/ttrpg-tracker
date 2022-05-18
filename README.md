@@ -94,7 +94,7 @@
    <li>Click the Delete Button in the bottom left corner under the image</li>
    <li>The game will be deleted from your My Games Page</li>
    <li>If you added the game via Add New Game, the version only exists on your My Games page and will be deleted</li>
-   <li>If you wish to add a <li>If you wish to add a new game you created again, use the Add New Game in the navbar</li>
+   <li>If you wish to add a new game you created again, use the Add New Game in the navbar</li>
    <li>Otherwise, click the + button if the game already exists in the app to add it back to your collection</li>
 </ol>
 </details>
