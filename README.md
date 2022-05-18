@@ -66,7 +66,7 @@
 | Verb   | URI Pattern                         | Controller#Action              |
 |--------|-------------------------------------|--------------------------------|
 | GET    | `/`                                 | `games#`                       |
-| GET    | `/coyoteandcrow`                    | `games#/oyoteandcrow`          |
+| GET    | `/coyoteandcrow`                    | `games#/coyoteandcrow`          |
 | GET    | `/dnd`                              | `games#dnd`                    |
 | GET    | `/fitd`                             | `games#fitd`                   |
 | GET    | `/forgediniron`                     | `games#forgediniron`           |
