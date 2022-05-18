@@ -18,7 +18,7 @@
 
 <h2> :atom_symbol: Getting Started </h2>
 
-<h3> :calling: Instructions </h3>
+<h3> :calling: Install Instructions </h3>
 <details open>
 <summary>Installation</summary>
 <p></p>
@@ -47,6 +47,69 @@
 </ul>
 </details>
 <p></p>
+
+<h3> :calling: How To Use </h3>
+
+<details>
+<summary>How to Add a Game to My Games</summary>
+<p></p>
+<ol>
+   <li>Click the + button on the All Games Page</li>
+   <li>Go to My Games and you will see the game in your personal collection</li>
+</ol>
+</details>
+<p></p>
+
+<details>
+<summary>How to Add a New Game</summary>
+<p></p>
+<ol>
+   <li>Click Add New Game in the Navbar</li>
+   <li>Fill in the fields on the New Game page</li>
+   <li>Click the Add New Game button at the bottom of the page</li>
+   <li>Go to My Games and you will see the game in your personal collection</li>
+   <li>*The game will appear for only you (if you are the one who added it) on your My Games page</li>
+</ol>
+</details>
+<p></p>
+
+<details>
+<summary>How to Edit a Game</summary>
+<p></p>
+<ol>
+   <li>Go to My Games and click the View button</li>
+   <li>Click the Edit Button in the bottom left corner under the image</li>
+   <li>Fill in the fields on the Edit Page</li>
+   <li>Click the Edit Game Button at the bottom of the page</li>
+   <li>The updated version of the game will appear on your My Games Page</li>
+</ol>
+</details>
+<p></p>
+
+<details>
+<summary>How to Delete a Game</summary>
+<p></p>
+<ol>
+   <li>Go to My Games and click the View button</li>
+   <li>Click the Delete Button in the bottom left corner under the image</li>
+   <li>The game will be deleted from your My Games Page</li>
+   <li>If you added the game via Add New Game, the version only exists on your My Games page and will be deleted</li>
+   <li>If you wish to add a <li>If you wish to add a new game you created again, use the Add New Game in the navbar</li>
+   <li>Otherwise, click the + button if the game already exists in the app to add it back to your collection</li>
+</ol>
+</details>
+<p></p>
+
+<details>
+<summary>How to Sort</summary>
+<p></p>
+<ol>
+   <li>In the Navbar, click System, Genres or Game Type to sort by the categories</li>
+   <li>A dropdown will appear, allowing you to select sub-categories, which will bring you to the sorted page once clicked</li>
+</ol>
+</details>
+<p></p>
+
 <h1>:arrow_right: Routes</h1>
 
 <details>
