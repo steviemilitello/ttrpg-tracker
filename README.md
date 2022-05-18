@@ -1,26 +1,67 @@
-# PROJECT 2 #
+<div align="center">
+   <h1>:game_die: TTRPG Tracker :game_die:</h1>
+   <h3><a href="https://ttrpgtracker.herokuapp.com/">https://ttrpgtracker.herokuapp.com/</a></h3>                           
+   <a href="http://steviecodes.com" target="_blank">
+      <img src="https://img.shields.io/badge/-Portfolio_-darkgreen?style=for-the-badge&logo=medium"/>
+   </a>
+   <a href="https://www.linkedin.com/in/stevie-militello/" target="_blank">
+      <img src="https://img.shields.io/badge/-Linkedin-blue?style=for-the-badge&``logo=Linkedin&logoColor=white">
+   </a> 
+   <a href="mailto:steviemilitello@gmail.com" target="_blank">
+      <img src="https://img.shields.io/badge/-Email-c14438?style=for-the-badge&logo=Gmail&``logoColor=white">
+   </a>
+</div>
 
-## TTTRPG Tracker ##
+<h1>:books: Description</h1>
 
-- An app for tracking your tabletop rpg book collection 
+<p>TTRPG Tracker is an app to keep track of your tabletop RPG book collection. As a user you can view books, add books to your collection, add new books, and add comments to a book's page.</p>
 
-## Installation 
+<h2> :atom_symbol: Getting Started </h2>
 
-1. Fork and clone this repo 
-2. install the necessary dependencies - `npm install @popperjs/core bcryptjs connect-mongo dotenv express express-session liquid-express-views method-override mongoose morgan`
-3. run `npm seed` to seed the database from seed.js 
-4. run `npm start` and go to `localhost:3000` in your browser to view
+<h3> :calling: Instructions </h3>
+<details open>
+<summary>Installation</summary>
+<p></p>
+<ul>
+    <li>Fork and Clone this Repo</li>
+    <li>Install the necessary dependencies: <code>npm install @popperjs/core bcryptjs connect-mongo dotenv express express-session liquid-express-views method-override mongoose morgan</code></li>
+    <li>run <code>npm seed</code> to seed the database from <code>seed.js</code></li>
+    <li>run <code>npm start</code> and go to <code>localhost:3000</code> in your browser to view</li>
+</ul>
+</details>
 
-## Routes
+<details open>
+<summary>Dependencies</summary>
+<p></p>
+<ul>
+    <li>Popper JS</li>
+    <li>Bcrypt</li>
+    <li>Connect-Mongo</li>
+    <li>Dotenv</li>
+    <li>Express</li>
+    <li>Express-Session</li>
+    <li>Liquid-Express-Views</li>
+    <li>Method-Override</li>
+    <li>Mongoose</li>
+    <li>Morgan</li>
+</ul>
+</details>
 
-**Comment**
+<h1>:arrow_right: Routes</h1>
+
+<details>
+<summary> Comment</summary>
 
 | Verb   | URI Pattern                         | Controller#Action              |
 |--------|-------------------------------------|--------------------------------|
 | POST   | `/games/:gameId`                    | `games#gameId`                 |
 | DELETE | `/games//delete/:gameId/:commId`    | `games#delete#gameId#commId`   |
 
-**Games** 
+</details>
+
+<details>
+<summary> Games</summary>
+
 
 | Verb   | URI Pattern                         | Controller#Action              |
 |--------|-------------------------------------|--------------------------------|
@@ -52,13 +93,19 @@
 | GET    | `/:id`                              | `games#:id#`                   |
 | DELETE | `/:id`                              | `games#:id#`                   |
 
-**Home**
+</details>
+
+<details>
+<summary> Home</summary>
 
 | Verb   | URI Pattern                         | Controller#Action              |
 |--------|-------------------------------------|--------------------------------|
 | GET    | `/`                                 | `/`                            |
 
-**User**
+</details>
+
+<details>
+<summary> User</summary>
 
 | Verb   | URI Pattern                         | Controller#Action              |
 |--------|-------------------------------------|--------------------------------|
@@ -66,49 +113,51 @@
 | POST   | `/auth/login`                       | `users#login`                  |
 | DELETE | `/auth/logout/`                     | `users#logout`                 |
 
-## Pitch
+</details>
 
-**Example Image 1**
+<h1>:framed_picture: Screenshots</h1>
 
-![a picture of an example of the app](public/images/example1.png)
+<details>
+<summary> :art: ERD</summary>
 
-**Example Image 2**
+| Description | Screenshot |
+|------------ | ------------|
+| <h3 align="center">ERD</h3> | <img src="public/images/erd.png" width="700"/> |
 
-![a picture of another example of the app](public/images/example2.png)
+</details>
 
-**Entity-Relationship Diagram** 
+<details>
+<summary> :art: Wireframes</summary>
 
-![a picture of the entity-relationship diagram](public/images/erd.png)
+| Description | Screenshot |
+|------------ | ------------|
+| <h3 align="center">Example Page 1</h3> | <img src="public/images/example1.png" width="700"/> |
+| <h3 align="center">Example Page 2</h3> | <img src="public/images/example2.png" width="700"> |
 
-### REQUIREMENTS
+</details>
+<p></p>
+<h1>:bust_in_silhouette: User Story</h1>
 
-- Models: User, Game Library, Comments
-- Seeded Data
-- RESTful routes: utilize routes for examples of user story below such as showing all the books, showing the users library, adding and deleting books to their library etc. 
-- ODM / MongoDB - utilize ODM to create a database of game information
+<ul>
+    <li>As a user they want to be able to be able to add items they own to a collection</li>
+    <li>They want be able to see what books they have in their collection</li>
+    <li>They want to be able to add new books to their collection</li>
+    <li>They want to be able to delete books from their collection</li>
+    <li>They want to be able to sort the books by name, genre, system, creator, type etc.</li>
+</ul>
 
-### USER STORY 
+<h1>:computer: Technologies Used</h1>
 
-- As a user they want to be able to be able to add items they own to a library
-- They want be able to see what books they have in their library 
-- They want to be able to add new books to their library 
-- They want to be able to delete books from their collection
-- They want to be able to sort the books by name, genre, system, creator, type etc. 
-
-### IMPLEMENTATION 
-
-- A database where information about the games are stored
-- A page that shows a list of available games to add
-- A page that shows information about the individual game 
-- A page for users to add a game if they game does not exist 
-- A page to edit the information about their copy of the game 
-- A page that shows the user's library of games
-- A sidebar or top menu bar to show the various options 
-- A way to sort games
-
-### TECHNOLOGIES 
-
-- HTML, CSS, CSS Bootstrap, JavaScript, Liquid JS, Express, MongoDB
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![FontAwesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) 
+![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![ExpressJS](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![LiquidJS](https://img.shields.io/badge/-Liquidjs-blue?style=for-the-badge&logoColor=white)
+![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
 
 
