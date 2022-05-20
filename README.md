@@ -16,7 +16,7 @@
 
 <p>TTRPG Tracker is an app to keep track of your tabletop RPG book collection. As a user you can view books, add books to your collection, remove books from your collection, add new books to your collection, edit and delete books in your collection, sort the books, and add and delete comments on a book's page.</p>
 
-<h2> :atom_symbol: Getting Started </h2>
+<h1> :atom_symbol: Getting Started </h1>
 
 <h3> :calling: Install Instructions </h3>
 <details open>
