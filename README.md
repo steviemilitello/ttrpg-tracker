@@ -208,29 +208,30 @@
 <details>
 <summary> :bar_chart: ERD</summary><br />
 
-| Description | Screenshot |
-|------------ | ------------|
-| <h3 align="center">ERD</h3> | <img src="https://i.imgur.com/J7CPtQo.png" width="700"/> |
+| Description                        | Screenshot                                               |
+|----------------------------------- | -------------------------------------------------------- |
+| <h3 align="center">ERD</h3>        | <img src="https://i.imgur.com/J7CPtQo.png" width="700"/> |
 
 </details>
 
 <details>
 <summary> :art: Wireframes</summary><br />
 
-| Description | Screenshot |
-|------------ | ------------|
-| <h3 align="center">Example Page 1</h3> | <img src="public/images/example1.png" width="700"/> |
-| <h3 align="center">Example Page 2</h3> | <img src="public/images/example2.png" width="700"> |
+| Description                        | Screenshot                                               |
+|----------------------------------- | -------------------------------------------------------- |
+| <h3 align="center">Index Page</h3> | <img src="https://i.imgur.com/xhKYNot.png" width="700"/> |
+| <h3 align="center">Show Page</h3>  | <img src="https://i.imgur.com/hrqSA74.png" width="700">  |
 
 </details>
 
 <details open>
 <summary> :gear: Functionality</summary><br />
 
-| Description | Screenshot |
-|------------ | ------------|
-| <h3 align="center">Index Page</h3> | <img src="https://i.imgur.com/xhKYNot.png" width="700"/> |
-| <h3 align="center">Show Page</h3> | <img src="https://i.imgur.com/hrqSA74.png" width="700"> |
+| Description                        | Screenshot                                               |
+|----------------------------------- | -------------------------------------------------------- |
+| <h3 align="center">Index Page</h3> | <img src="https://i.imgur.com/4nj1cNP.png" width="700"/> |
+| <h3 align="center">Show Page</h3>  | <img src="https://i.imgur.com/6JlnZ6C.png" width="700">  |
+
 </details>
 <p></p>
 
