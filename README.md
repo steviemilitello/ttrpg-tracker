@@ -24,7 +24,7 @@
 <p></p>
 <ul>
     <li>Fork and Clone this Repo</li>
-    <li>Install the necessary dependencies by copying the code below (or see dependencies to install individually): <br /><code>npm i @popperjs/core bcryptjs connect-mongo dotenv express express-session liquid-express-views method-override mongoose morgan</code></li>
+    <li>Install the necessary dependencies by copying the code below (or see dependencies to install individually): <br /><code>npm i @popperjs/core bcryptjs connect-mongo dotenv express express-session liquid-express-views method-override mongoose morgan serve-favicon</code></li>
     <li>run <code>npm seed</code> to seed the database from <code>seed.js</code></li>
     <li>run <code>npm start</code> and go to <code>localhost:3000</code> in your browser to view</li>
 </ul>
@@ -44,6 +44,7 @@
     <li><a href="https://www.npmjs.com/package/method-override">Method-Override</a> <code>npm i method-override</code></li>
     <li><a href="https://www.npmjs.com/package/mongoose">Mongoose</a> <code>npm i mongoose</code></li>
     <li><a href="https://www.npmjs.com/package/morgan">Morgan</a> <code>npm i morgan</code></li>
+    <li><a href="https://www.npmjs.com/package/serve-favicon">Serve-Favicon</a> <code>npm i serve-favicon</code></li>
 </ul>
 </details>
 <p></p>
@@ -209,7 +210,7 @@
 
 | Description | Screenshot |
 |------------ | ------------|
-| <h3 align="center">ERD</h3> | <img src="public/images/erd.png" width="700"/> |
+| <h3 align="center">ERD</h3> | <img src="https://i.imgur.com/J7CPtQo.png" width="700"/> |
 
 </details>
 
@@ -228,8 +229,8 @@
 
 | Description | Screenshot |
 |------------ | ------------|
-| <h3 align="center">Index Page</h3> | <img src="https://i.imgur.com/4nj1cNP.png" width="700"/> |
-| <h3 align="center">Show Page</h3> | <img src="https://i.imgur.com/6JlnZ6C.png" width="700"> |
+| <h3 align="center">Index Page</h3> | <img src="https://i.imgur.com/xhKYNot.png" width="700"/> |
+| <h3 align="center">Show Page</h3> | <img src="https://i.imgur.com/hrqSA74.png" width="700"> |
 </details>
 <p></p>
 

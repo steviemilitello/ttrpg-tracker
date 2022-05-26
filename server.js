@@ -9,6 +9,9 @@ const GameRouter = require('./controllers/games')
 const CommentRouter = require('./controllers/comment')
 const UserRouter = require('./controllers/user')
 const User = require("./models/user")
+const favicon = require('serve-favicon')
+const path = require('path')
+
 // SEE MORE DEPENDENCIES IN ./utils/middleware.js
 // user and resource routes linked in ./utils/middleware.js
 
@@ -28,6 +31,7 @@ middleware(app)
 app.use('/auth', UserRouter)
 app.use('/games', GameRouter)
 app.use('/comments', CommentRouter)
+app.use(favicon(path.join(__dirname, 'public/images', 'd20.ico')))
 
 app.get('/', (req, res) => {
     const { username, userId, loggedIn } = req.session
