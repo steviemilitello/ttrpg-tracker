@@ -1,6 +1,9 @@
 <div align="center">
-   <h1>:game_die: TTRPG TRACKER :game_die:</h1>
-   <h3><a href="https://ttrpgtracker.herokuapp.com/">https://ttrpgtracker.herokuapp.com/</a></h3>                           
+      <div align="center">
+         <!-- <h1>:game_die: TTRPG TRACKER :game_die:</h1> -->
+         <img src="https://i.imgur.com/UNpCZPs.png" width="800" height="400" />
+   </div>
+   <h3><a href="https://ttrpgtracker.herokuapp.com/">https://ttrpgtracker.herokuapp.com/</a></h3> 
    <a href="http://steviecodes.com" target="_blank">
       <img src="https://img.shields.io/badge/-Portfolio_-darkgreen?style=for-the-badge&logo=medium"/>
    </a>
