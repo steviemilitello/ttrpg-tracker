@@ -11,6 +11,25 @@ h1 {
     color: white;
 }
 
+.auth-text  {
+    color: white;
+}
+
+.welcome-d20 {
+    padding: 30px;
+    text-align: center;
+    font-size: 100px;
+}
+
+.welcome-div {
+    padding: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
 .navbar-brand {
     font-family: 'Basteleur', sans-serif;
     font-size: 25px;
