@@ -59,7 +59,7 @@ app.get('/', (req, res) => {
 
 app.get('/coyoteandcrow', (req, res) => {
 	// find the games
-	Game.find({ system: "Coyote & Crow" })
+	Game.find({ seeddata: true, system: "Coyote & Crow" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -78,7 +78,7 @@ app.get('/coyoteandcrow', (req, res) => {
 
 app.get('/dnd', (req, res) => {
 	// find the games
-	Game.find({ system: "Dungeons & Dragons 5th Edition" })
+	Game.find({ seeddata: true, system: "Dungeons & Dragons 5th Edition" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -97,7 +97,7 @@ app.get('/dnd', (req, res) => {
 
 app.get('/fitd', (req, res) => {
 	// find the games
-	Game.find({ system: "Forged in the Dark" })
+	Game.find({ seeddata: true, system: "Forged in the Dark" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -116,7 +116,7 @@ app.get('/fitd', (req, res) => {
 
 app.get('/forgediniron', (req, res) => {
 	// find the games
-	Game.find({ system: "Forged in Iron" })
+	Game.find({ seeddata: true, system: "Forged in Iron" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -135,7 +135,7 @@ app.get('/forgediniron', (req, res) => {
 
 app.get('/osr', (req, res) => {
 	// find the games
-	Game.find({ system: "Old School Renaissance" })
+	Game.find({ seeddata: true, system: "Old School Renaissance" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -154,7 +154,7 @@ app.get('/osr', (req, res) => {
 
 app.get('/pbta', (req, res) => {
 	// find the games
-	Game.find({ system: "Powered by the Apocalypse" })
+	Game.find({ seeddata: true, system: "Powered by the Apocalypse" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -173,7 +173,7 @@ app.get('/pbta', (req, res) => {
 
 app.get('/stellaremnants', (req, res) => {
 	// find the games
-	Game.find({ system: "Stellar Remnants" })
+	Game.find({ seeddata: true, system: "Stellar Remnants" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -192,7 +192,7 @@ app.get('/stellaremnants', (req, res) => {
 
 app.get('/zweihander', (req, res) => {
 	// find the games
-	Game.find({ system: "Powered by Zweihander" })
+	Game.find({ seeddata: true, system: "Powered by Zweihander" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -213,7 +213,7 @@ app.get('/zweihander', (req, res) => {
 
 app.get('/cyberpunk', (req, res) => {
 	// find the games
-	Game.find({ genres: "Cyberpunk" })
+	Game.find({ seeddata: true, genres: "Cyberpunk" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -232,7 +232,7 @@ app.get('/cyberpunk', (req, res) => {
 
 app.get('/fantasy', (req, res) => {
 	// find the games
-	Game.find({ genres: "Fantasy" })
+	Game.find({ seeddata: true, genres: "Fantasy" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -251,7 +251,7 @@ app.get('/fantasy', (req, res) => {
 
 app.get('/darkfantasy', (req, res) => {
 	// find the games
-	Game.find({ genres: "Dark Fantasy" })
+	Game.find({ seeddata: true, genres: "Dark Fantasy" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -270,7 +270,7 @@ app.get('/darkfantasy', (req, res) => {
 
 app.get('/scifi', (req, res) => {
 	// find the games
-	Game.find({ genres: "Sci-Fi" })
+	Game.find({ seeddata: true, genres: "Sci-Fi" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -289,7 +289,7 @@ app.get('/scifi', (req, res) => {
 
 app.get('/sciencefantasy', (req, res) => {
 	// find the games
-	Game.find({ genres: "Science Fantasy" })
+	Game.find({ seeddata: true, genres: "Science Fantasy" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -308,7 +308,7 @@ app.get('/sciencefantasy', (req, res) => {
 
 app.get('/steampunk', (req, res) => {
 	// find the games
-	Game.find({ genres: "Steampunk" })
+	Game.find({ seeddata: true, genres: "Steampunk" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -327,7 +327,7 @@ app.get('/steampunk', (req, res) => {
 
 app.get('/urbanfantasy', (req, res) => {
 	// find the games
-	Game.find({ genres: "Urban Fantasy" })
+	Game.find({ seeddata: true, genres: "Urban Fantasy" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -346,7 +346,7 @@ app.get('/urbanfantasy', (req, res) => {
 
 app.get('/genreagnostic', (req, res) => {
 	// find the games
-	Game.find({ genres: "Genre Agnostic" })
+	Game.find({ seeddata: true, genres: "Genre Agnostic" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -367,7 +367,7 @@ app.get('/genreagnostic', (req, res) => {
 
 app.get('/gm', (req, res) => {
 	// find the games
-	Game.find({ gametypes: "GM" })
+	Game.find({ seeddata: true, gametypes: "GM" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -386,7 +386,7 @@ app.get('/gm', (req, res) => {
 
 app.get('/gmless', (req, res) => {
 	// find the games
-	Game.find({ gametypes: "GM-less" })
+	Game.find({ seeddata: true, gametypes: "GM-less" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
@@ -405,7 +405,7 @@ app.get('/gmless', (req, res) => {
 
 app.get('/solo', (req, res) => {
 	// find the games
-	Game.find({ gametypes: "Solo" })
+	Game.find({ seeddata: true, gametypes: "Solo" })
 		// render template after they are found
 		.then((games) => {
 			const username = req.session.username
